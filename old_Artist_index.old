@@ -1,0 +1,16 @@
+<?php while( $artist_query->have_posts() ) : $artist_query->the_post(); ?>
+
+    <?php
+    $name = get_field( 'artist_name' );
+    $avatar = get_field( 'artist_avatar' );
+    $avatar_url = $avatar['sizes']['product_thumb'];
+    $season = get_field( 'artist_season' );
+
+    ?>
+
+    <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
+        <section class="image-doubler--inner">
+            <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
+        </section>
+    </section>
+<?php endwhile; ?>

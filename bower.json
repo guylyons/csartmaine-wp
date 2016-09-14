@@ -1,0 +1,23 @@
+{
+  "name": "Loma",
+  "description": "Custom built theme exclusively for CSArt Maine",
+  "main": "index.js",
+  "authors": [
+    "Guy Lyons <guylyons2@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "slick-carousel": "^1.6.0",
+    "packery": "^2.1.1",
+    "typographic": "^2.9.3"
+  }
+}

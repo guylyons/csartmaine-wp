@@ -1,0 +1,45 @@
+/*=====================================
+Utilities
+=====================================*/
+
+.row {
+    lost-utility: clearfix;
+    margin-bottom: 20px;
+}
+
+.blog-container {
+    lost-center: 700px;
+    @media (max-width: 800px) {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+.container {
+    lost-center: 1200px;
+    @media (max-width: 800px) {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+.full {
+    lost-column: 1;
+}
+
+.half {
+    @media (min-width: 768px) {
+        lost-column: 1/2;
+    }
+}
+
+.third {
+    lost-column: 1/3;
+}
+
+.quarter {
+    lost-column: 1/4;
+    @media (max-width: 800px) {
+        lost-column: 1/2;
+    }
+}

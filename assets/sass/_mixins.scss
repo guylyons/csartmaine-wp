@@ -1,0 +1,31 @@
+/*=====================================
+    Mixins
+=====================================*/
+@mixin underline() {
+    text-decoration: none;
+    color: $black;
+    background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($primary-color,$primary-color);
+    background-size: .05em 1px,.05em 1px,1px 1px;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    text-shadow: .03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+    background-position: 0 95%,100% 95%,0 95%;
+}
+
+@mixin plain-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin col-6 {
+    lost-column: 1/2 0;
+    @media (max-width: 800px) {
+        lost-column: 1;
+    }
+}
+
+@mixin cool_gradient() {
+    background: #f857a6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f857a6 , #ff5858); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f857a6 , #ff5858); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
