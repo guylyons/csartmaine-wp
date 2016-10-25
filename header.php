@@ -3,6 +3,18 @@
 
 $logo = get_field( 'logo', 8 );
 $logo = $logo['sizes']['large'];
+
+function title() {
+    if( is_blog() ) {
+        return 'Blog';
+    } else if( is_shop() ) {
+        return 'Shop';
+    } else if( is_page( 'artists' ) ) {
+        return 'Artist';
+    } else {
+        return get_the_title();
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +22,7 @@ $logo = $logo['sizes']['large'];
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <?php $title = $pagename ? ucfirst( $pagename ) . ' | CSArt Maine' : 'CSArt Maine'; ?> -->
-    <title><?php wp_title( '|', true, 'right' ); ?>CSArt Maine</title>
+    <title><?php echo title() ?> | CSArt Maine</title>
     <?php wp_head(); ?>
 </head>
 
@@ -29,11 +40,15 @@ $logo = $logo['sizes']['large'];
 
     <header class="header-wrap">
         <div class="container">
+            <?php if( $logo ): ?>
+                <section>
+                    <a href="<?php echo home_url(); ?>">
+                        <img class="logo" src="<?php echo $logo; ?>" alt="CSArt Maine Logo">
+                    </a>
+                </section>
+            <?php endif; ?>
             <nav class="nav-primary">
-                <?php if( $logo ): ?>
-                    <a href="<?php echo home_url(); ?>"><img class="logo" src="<?php echo $logo; ?>" alt="CSArt Maine Logo"></a>
-                    <?php csart_primary_nav(); ?>
-                <?php endif; ?>
+                <?php csart_primary_nav(); ?>
             </nav>
 
             <nav class="nav-primary-scroll">

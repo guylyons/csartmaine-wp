@@ -11,7 +11,7 @@ add_image_size( 'index_blog', '600', '180', true );
     Enqueue Styles
 =====================================*/
 function csart_enqueue_styles() {
-    wp_register_style( 'evil-icons', 'https://cdn.jsdelivr.net/evil-icons/1.7.8/evil-icons.min.css', false, '1.7.8' );
+    wp_register_style( 'evil-icons', 'https://cdn.jsdelivr.net/evil-icons/1.8.0/evil-icons.min.css', false, '1.7.8' );
     wp_register_style( 'material-icons', 'https://fonts.googleapis.com/icon?family=Material+Icons', false, '2.2.0' );
     wp_register_style( 'csart-custom', get_template_directory_uri() . '/assets/css/main.css', false, '1.0' );
 
@@ -24,7 +24,7 @@ add_action( 'wp_enqueue_scripts', 'csart_enqueue_styles' );
 
 function csart_enqueue_scripts() {
     wp_register_script( 'csart-global', get_template_directory_uri() . '/assets/js/app.js', array( 'jquery' ), '1.0', true );
-    wp_register_script( 'Evil Icons', 'https://cdn.jsdelivr.net/evil-icons/1.7.8/evil-icons.min.js', true, '1.7.8' );
+    wp_register_script( 'Evil Icons', 'https://cdn.jsdelivr.net/evil-icons/1.8.0/evil-icons.min.js', true, '1.7.8' );
     wp_register_script( 'Slick Carousel', get_template_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), '1.6.0', true );
 
     wp_enqueue_script( 'jquery-masonry' );
@@ -143,6 +143,23 @@ function social_share() {
 
     $link = "<a href='$facebook_url' target='_blank'>Share</a>";
     echo $link;
+}
+
+// Ninja Forms Hidden Fields
+add_action( 'ninja_forms_display_after_fields', 'custom_extra_value' );
+
+function custom_extra_value(){
+    $ip = $_SERVER["REMOTE_ADDR"]; // Get our user's IP address.
+    ?>
+    <input type="hidden" name="_user_IP" value="<?php echo $ip;?>">
+    <?php
+}
+
+function is_featured() {
+    $featured = get_field( 'is_featured' );
+    if( $featured != '' ) {
+        return 'featured-product';
+    }
 }
 
 ?>

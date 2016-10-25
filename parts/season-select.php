@@ -17,6 +17,9 @@ $season_terms = get_terms( array(
                     <?php echo $term->slug; ?>
                 </div>
             </a>
+            <?php if( is_page( $term->slug ) ): ?>
+                Fuck.
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
 </section>

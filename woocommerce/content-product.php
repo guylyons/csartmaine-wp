@@ -28,7 +28,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 
-<li <?php post_class(); ?>>
+<li <?php post_class( is_featured() ); ?>>
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.

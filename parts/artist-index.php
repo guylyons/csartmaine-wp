@@ -9,8 +9,6 @@
 <?php
 $args = array(
     'post_type'  =>  'artists',
-    'order'      =>  'ASC',
-    'orderby'    =>  'name',
     'tax_query'  =>  array(
         array(
             'taxonomy'    =>    'season',
@@ -38,18 +36,5 @@ $artist_query = new WP_Query( $args );
             </div>
         </div>
     </section>
-
-    <?php $toggle = get_field( 'cta_apply_toggle', 145 ); ?>
-    <?php if( $toggle === true ): ?>
-        <section class="artist-call">
-            <div class="blog-container row">
-                <h1 class="artist-call__headline"><?php the_field( 'cta_apply_headline', 145 ); ?></h1>
-                <div class="artist-call__paragraph">
-                    <?php the_field( 'cta_apply_content', 145 ); ?>
-                </div>
-                <a href="/#contactUs" class="button">Apply</a>
-            </div>
-        </section>
-    <?php endif; ?>
 
     <?php get_template_part( 'parts/recent-products' ); ?>

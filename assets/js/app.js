@@ -1,11 +1,6 @@
-'use strict';
+"use strict";
 
 jQuery(document).ready(function ($) {
-    console.log("Are you interested in developing for CSArt Maine's new app? Email us.");
-
-    $('#artistApply').on('click', function (e) {
-        console.log("Yp");
-    });
 
     $('#front-page-slider').slick({
         arrows: true,
@@ -25,22 +20,6 @@ jQuery(document).ready(function ($) {
             $(".nav-primary-scroll").removeClass("nav-primary-scroll--toggle");
         }
     });
-
-    // $('.slider-content .button').on('mouseover', function(){
-    //     $('.slider__opacity-layer').fadeOut();
-    //
-    // }).on('mouseout', function(){
-    //     $('.slider__opacity-layer').fadeIn();
-    // });
-
-    // var indexBlog = document.querySelector('.index-blog');
-    // indexBlog.style.border = '1px solid red';
-    // indexBlog.addEventListener('click', function(e){
-    //     e.preventDefault();
-    //     var target = event.target;
-    //     target.childNodes[7].style.display = "block";
-    //     console.log(target);
-    // }, false);
 
     // Smooth Scrolling
     $(function () {

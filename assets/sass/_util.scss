@@ -1,6 +1,7 @@
 /*=====================================
 Utilities
 =====================================*/
+// @lost gutter 5px;
 
 .row {
     lost-utility: clearfix;
@@ -42,4 +43,24 @@ Utilities
     @media (max-width: 800px) {
         lost-column: 1/2;
     }
+}
+
+.button {
+    border: 1px solid $black;
+    padding: 10px 15px;
+    font-family: $avenir;
+    background: none;
+    color: $black;
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+}
+
+.tiny-hr {
+    height: 2px;
+    background: $white;
+    display: block;
+    width: 30px;
+    margin: 10px 0;
 }

@@ -1,9 +1,4 @@
 jQuery(document).ready(function($) {
-    console.log("Are you interested in developing for CSArt Maine's new app? Email us.");
-
-    $('#artistApply').on('click', function(e){
-        console.log("Yp");
-    });
 
     $('#front-page-slider').slick({
         arrows: true,
@@ -24,56 +19,40 @@ jQuery(document).ready(function($) {
         }
     });
 
-    // $('.slider-content .button').on('mouseover', function(){
-    //     $('.slider__opacity-layer').fadeOut();
-    //
-    // }).on('mouseout', function(){
-    //     $('.slider__opacity-layer').fadeIn();
-    // });
-
-    // var indexBlog = document.querySelector('.index-blog');
-    // indexBlog.style.border = '1px solid red';
-    // indexBlog.addEventListener('click', function(e){
-    //     e.preventDefault();
-    //     var target = event.target;
-    //     target.childNodes[7].style.display = "block";
-    //     console.log(target);
-    // }, false);
-
     // Smooth Scrolling
     $(function() {
-          $('a[href*="#"]:not([href="#"])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html, body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
+        $('a[href*="#"]:not([href="#"])').click(function() {
+            if (window.location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && window.location.hostname == this.hostname) {
+		var target = $(this.hash);
+		target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		if (target.length) {
+                    $('html, body').animate({
+			scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+		}
+	    }
+	});
+    });
 
-        var triangleImage = document.querySelector('.triangle-image'),
-            recentPosts   = document.querySelector('.recent-posts');
+    var triangleImage = document.querySelector('.triangle-image'),
+    recentPosts   = document.querySelector('.recent-posts');
 
-        if( recentPosts ) {
+    if( recentPosts ) {
 
-            recentPosts.addEventListener('mouseover', function(e){
+        recentPosts.addEventListener('mouseover', function(e){
 
-                var target = event.target,
+            var target = event.target,
 
-                    targetClass = target.className,
-                    targetClassParent = target.parentElement.className;
+            targetClass = target.className,
+            targetClassParent = target.parentElement.className;
 
-                if ( targetClass === 'recent-posts__link' ) {
-                    var targetClassElement = target.getAttribute('data-img-url');
+            if ( targetClass === 'recent-posts__link' ) {
+                var targetClassElement = target.getAttribute('data-img-url');
 
-                    if( targetClassElement !== null ) {
-                        triangleImage.style.backgroundImage = 'url(' + targetClassElement + ')';
-                    }
+                if( targetClassElement !== null ) {
+                    triangleImage.style.backgroundImage = 'url(' + targetClassElement + ')';
+                }
 
                 // } else if( targetClassParent === 'recent-posts__item' ) {
                 //     var targetClassParentElement = target.parentElement.getAttribute('data-img-url');
@@ -82,8 +61,8 @@ jQuery(document).ready(function($) {
                 //         triangleImage.style.backgroundImage = 'url(' + targetClassParentElement + ')';
                 //     }
 
-                }
-            });
-        }
+            }
+        });
+    }
 
 });

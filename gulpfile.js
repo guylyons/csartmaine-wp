@@ -11,16 +11,16 @@ var gulp = require('gulp'),
 
 // Sass
 gulp.task('sass', function () {
-  return gulp.src('assets/sass/**/*.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
-      cascade: false}))
-    .pipe(postcss([
-      lost()
-    ]))
-    .pipe(nano())
-    .pipe(gulp.dest('./assets/css'));
+    return gulp.src('assets/sass/**/*.scss')
+	.pipe(sass.sync().on('error', sass.logError))
+	.pipe(autoprefixer({
+	    browsers: ['last 2 versions'],
+	    cascade: false}))
+	.pipe(postcss([
+	    lost()
+	]))
+	.pipe(nano())
+	.pipe(gulp.dest('./assets/css'));
 });
 
 // Babel.js
@@ -33,25 +33,25 @@ gulp.task('babel', () => {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('assets/sass/**/*.scss', ['sass']),
-  gulp.watch('assets/src/**/*.js', ['babel']);
+    gulp.watch('assets/sass/**/*.scss', ['sass']),
+    gulp.watch('assets/src/**/*.js', ['babel']);
 });
 
 // BrowserSync
 gulp.task('serve', ['browser-sync', 'watch']);
 
 gulp.task('browser-sync', function () {
-   var files = [
-      '**/*.php',
-      'assets/css/**/*.css',
-      'assets/imgs/**/*',
-      'assets/js/**/*.js'
-   ];
+    var files = [
+	'**/*.php',
+	'assets/css/**/*.css',
+	'assets/imgs/**/*',
+	'assets/js/**/*.js'
+    ];
 
-   browserSync.init(files, {
-      proxy: 'csartmaine.dev:8888',
-      notify: false
-   });
+    browserSync.init(files, {
+	proxy: 'csartmaine.dev:8888',
+	notify: false
+    });
 });
 
 gulp.task('default', ['serve']);

@@ -30,6 +30,7 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
             <article class="post-article">
                 <?php the_content(); ?>
             </article>
+
         </main>
 
         <article class="recent-tweets">
@@ -56,6 +57,11 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
                 echo '</ul>';
             }
             ?>
+
+            <section class="container row">
+                <h4>@csartmaine Instagram</h4>
+                <?php echo wdi_feed(array('id'=>'1')); ?>
+            </section>
         </article>
 
         <section class="post-comments">
@@ -77,14 +83,14 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
         <?php if( $prev ): ?>
             <a class="half" href="<?php the_permalink( $prev->ID ); ?>">
                 <div class="blog-nav__box">
-                    <?php echo $prev->post_title; ?>
+                    <div data-icon="ei-chevron-left" data-size="m"></div> <?php echo $prev->post_title; ?>
                 </div>
             </a>
         <?php endif; ?>
         <?php if( $next ): ?>
             <a class="half" href="<?php the_permalink( $next->ID ); ?>/">
                 <div class="blog-nav__box">
-                    <?php echo $next->post_title; ?>
+                    <?php echo $next->post_title; ?> <div data-icon="ei-chevron-right" data-size="m"></div>
                 </div>
             </a>
         <?php endif; ?>

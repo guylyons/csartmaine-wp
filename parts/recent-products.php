@@ -10,6 +10,9 @@ $product_query = new WP_Query( $args );
 <?php if( $product_query->have_posts() ) : ?>
     </section>
     <section class="section-4">
+        <div class="container row">
+            <h2>Shop items</h2>
+        </div>
         <section class="container row">
             <?php while( $product_query->have_posts() ) : $product_query->the_post(); ?>
                 <?php
