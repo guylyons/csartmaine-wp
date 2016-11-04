@@ -3,6 +3,8 @@
 $index_id = get_option( 'page_for_posts' );
 $shop_id  = get_option( 'woocommerce_shop_page_id' );
 $hero_title = '';
+$hero_banner = '';
+$hero_url = '';
 
 if( is_blog() ) {
     $hero_banner = get_field( 'hero_banner', $index_id );
@@ -16,7 +18,9 @@ if ( is_shop() || is_product()  ) {
     $hero_title = get_the_title( $post->ID );
 }
 
-$hero_url = $hero_banner['url'];
+if ( $hero_banner != 0 ) {
+    $hero_url = $hero_banner['url'];
+}
 
 ?>
 

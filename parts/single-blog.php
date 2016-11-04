@@ -20,7 +20,7 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
         <main class="blog-article">
             <header  class="post-header">
                 <?php $subhead = get_field( 'subhead' ); ?>
-                <div class="post-meta"><?php if( $cat ) { echo $cat->name . ' | '; } ?><?php the_author(); ?> | <time><?php the_date( 't F Y' ); ?></time></div>
+                <div class="post-meta"><?php if( $cat ) { echo $cat->name . ' | '; } ?><?php the_author(); ?> | <time><?php the_date( 'd F Y' ); ?></time></div>
                 <h1 class="post-title"><?php the_title(); ?></h1>
                 <?php if( $subhead ) { echo '<h5 class="post-subhead">' . $subhead . '</h5>'; } ?>
             </header>

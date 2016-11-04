@@ -54,7 +54,11 @@ get_header();
             $name = get_field( 'artist_name' );
             $bio  = get_field( 'artist_bio' );
             $avatar = get_field( 'artist_avatar' );
-            $avatar_url = $avatar['sizes']['product_thumb'];
+            if ( $avatar['sizes']['product_thumb'] ) {
+                $avatar_url = $avatar['sizes']['product_thumb'];
+            } else {
+                $avatar_url = '';
+            }
 
             ?>
             <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
