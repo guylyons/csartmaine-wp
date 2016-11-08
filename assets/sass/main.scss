@@ -343,26 +343,15 @@ Section 4
 }
 .new-products {
     position: relative;
-    // .new-products-image {
-    //     width: 100%;
-    //     border-bottom: 2px solid transparent;
-    //     &:hover {
-    //         border-bottom: 2px solid $primary-color;
-    //     }
-    // }
+    .new-products-image {
+        width: 100%;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-bottom: 2px solid $primary-color;
+        }
+    }
     .new-products-content {
         position: relative;
-    }
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-a img {
-    border-bottom: 2px solid transparent;
-    &:hover {
-        border-bottom: 2px solid $primary-color;
     }
 }
 

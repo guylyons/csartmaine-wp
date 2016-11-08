@@ -1,7 +1,9 @@
 <?php
 $name = get_field( 'artist_name' );
 $avatar = get_field( 'artist_avatar' );
-$avatar_url = $avatar['url'];
+if ($avatar) {
+    $avatar_url = $avatar['url'];
+}
 $season = get_field( 'artist_season' );
 
 ?>

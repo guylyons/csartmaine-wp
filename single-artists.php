@@ -6,7 +6,9 @@ $medium = get_field( 'artist_medium' );
 $website = get_field( 'artist_website' );
 $bio = get_field( 'artist_bio' );
 $avatar = get_field( 'artist_avatar' );
-$avatar = $avatar['sizes']['thumbnail'];
+if ($avatar) {
+    $avatar = $avatar['sizes']['thumbnail'];
+}
 $facebook = get_field( 'facebook' );
 $twitter = get_field( 'twitter' );
 $instagram = get_field( 'instagram' );

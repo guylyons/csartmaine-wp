@@ -116,9 +116,8 @@ function get_artist_name() {
         echo '<div class="woocommerce-artist-name">';
         echo $artist_meta['artist_name'][0];
         echo '</div>';
-    // } else {
-    //     echo "<div>No artist name found.</div>";
-    // }
+    } else {
+        echo "<div>&nbsp;</div>";
     }
 }
 

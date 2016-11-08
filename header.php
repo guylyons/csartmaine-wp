@@ -11,6 +11,8 @@ function title() {
         return 'Shop';
     } else if( is_page( 'artists' ) ) {
         return 'Artist';
+    } else if ( is_front_page() ) {
+	return "Community Supported Art Maine";
     } else {
         return get_the_title();
     }
