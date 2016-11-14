@@ -84,7 +84,7 @@ function csart_footer_nav() {
         'menu'            => 'Footer Nav',                 // nav name
         'menu_id'         => 'nav-footer',                 // custom id
         'menu_class'      => 'nav-footer nav group',       // custom class
-        'theme_location'  => 'primary',                     // where it's located in the theme
+        'theme_location'  => 'footer',                     // where it's located in the theme
         'before'          => '',                           // before the menu
         'after'           => '',                           // after the menu
         'link_before'     => '',                           // before each link

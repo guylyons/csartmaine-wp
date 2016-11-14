@@ -31,13 +31,11 @@ get_header();
         <?php endif; ?>
     </section>
 
-    <section class="container">
+    <!-- <section class="container">
         <section class="row">
             <?php get_template_part( 'parts/recent', 'posts' ); ?>
         </section>
-    </section>
-
-    <?php get_template_part( 'parts/newsletter-signup' ); ?>
+    </section> -->
 
     <section class="container row">
         <?php
@@ -61,21 +59,26 @@ get_header();
             }
 
             ?>
-            <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
-                <section class="image-doubler--inner">
-                    <a href="<?php echo get_permalink(); ?>">
-                        <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
-                    </a>
+            <section class="meet-the-artist row">
+                <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
+                    <section class="image-doubler--inner">
+                        <a href="<?php echo get_permalink(); ?>">
+                            <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
+                        </a>
+                    </section>
                 </section>
-            </section>
-            <section class="half">
-                <h2>Meet <?php echo $name ?></h2>
-                <?php echo $bio ?>
+                <section class="image-doubler--content">
+                    <h2>Meet <em><?php echo $name ?></em></h2>
+                    <?php echo $bio ?>
+                    <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+                </section>
             </section>
 
         <?php endwhile; wp_reset_query(); ?>
 
     </section>
+
+    <?php get_template_part( 'parts/newsletter-signup' ); ?>
 
     <?php get_template_part( 'parts/recent-products' ); ?>
 
