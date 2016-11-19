@@ -3,7 +3,7 @@ $args = array(
     'post_type'         =>    'product',
     'posts_per_page'    =>    4,
     'order'             =>    'ASC',
-    'orderby'           =>    'rand'
+    'orderby'           =>    'rand',
 );
 $product_query = new WP_Query( $args );
 ?>
@@ -27,6 +27,7 @@ $product_query = new WP_Query( $args );
                              <img src="<?php echo $product_image_url; ?>" class="new-products-image">
                              <div class="new-products--artist-name">
                                  <?php get_artist_name(); ?>
+                                 <?php the_title(); ?>
                                  <?php get_template_part( 'woocommerce/single-product/price' ); ?>
                              </div>
                          </div>

@@ -117,7 +117,7 @@ function get_artist_name() {
         echo $artist_meta['artist_name'][0];
         echo '</div>';
     } else {
-        echo "<div>&nbsp;</div>";
+        echo "<div>CSArt Maine</div>";
     }
 }
 

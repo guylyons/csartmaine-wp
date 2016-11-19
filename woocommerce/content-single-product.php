@@ -50,6 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 	<div class="summary entry-summary">
+		
 		<h2><?php get_artist_name(); ?></h2>
 
 		<?php
