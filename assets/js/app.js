@@ -2,6 +2,9 @@
 
 jQuery(document).ready(function ($) {
 
+    $(".nav-close").click(function () {
+        $('.nav .nav--mobile').slideUp();
+    });
     $('#front-page-slider').slick({
         arrows: true,
         dots: true,

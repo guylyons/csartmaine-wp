@@ -161,4 +161,27 @@ function is_featured() {
     }
 }
 
+function csart_login_logo() { ?>
+    <style type="text/css">
+    .login {
+        border-top: 2px solid #ffd673;
+        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pat.png);
+        background-size: 80px;
+    }
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png);
+            padding-bottom: 30px;
+            padding-bottom: 75px;
+            background-size: cover;
+            width: 160px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'csart_login_logo' );
+
+function csart_login_logo_url() {
+    return home_url();
+}
+add_filter( 'login_headerurl', 'csart_login_logo_url' );
+
 ?>

@@ -1,6 +1,19 @@
 /*=====================================
 Footer
 =====================================*/
+@media (min-width: 1024px) {
+    main {
+        background: #FFF;
+        z-index: 9999;
+        margin-bottom: 410px;
+    }
+    .footer-wrap {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+}
 .footer-wrap {
     background: $white;
     border-top: 1px solid $light-grey;
@@ -33,7 +46,7 @@ Footer
             color: $grey;
             &:hover { text-decoration: underline; }
         }
-        
+
         .social-icons .icon {
             fill: $black;
             margin: -6px;
