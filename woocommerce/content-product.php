@@ -26,9 +26,11 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+
+$product_column_width = get_field( 'product_column_width' );
 ?>
 
-<li <?php post_class( is_featured() ); ?>>
+<li <?php post_class( 'fifth' ); ?>>
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.

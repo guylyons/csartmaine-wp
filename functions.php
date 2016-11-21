@@ -154,10 +154,10 @@ function custom_extra_value(){
     <?php
 }
 
-function is_featured() {
-    $featured = get_field( 'is_featured' );
-    if( $featured != '' ) {
-        return 'featured-product';
+function what_column_width() {
+    $product_column_width = get_field( 'product_column_width' );
+    if( $product_column_width != '' ) {
+        return $product_column_width;
     }
 }
 

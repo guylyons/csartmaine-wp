@@ -68,8 +68,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<?php endforeach; ?>
 
-				<div class="clear"></div>
-
 			</div>
 
 		<?php endif; ?>

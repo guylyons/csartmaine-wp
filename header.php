@@ -34,6 +34,12 @@ document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/tru
     <?php wp_head(); ?>
 </head>
 
+<div class="nav-open">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+</div>
+
 <nav class="nav nav--mobile">
     <?php csart_mobile_nav(); ?>
 </nav>

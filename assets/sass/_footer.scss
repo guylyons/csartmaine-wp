@@ -1,19 +1,6 @@
 /*=====================================
 Footer
 =====================================*/
-@media (min-width: 1024px) {
-    main {
-        background: #FFF;
-        z-index: 9999;
-        margin-bottom: 410px;
-    }
-    .footer-wrap {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: -1;
-    }
-}
 .footer-wrap {
     background: $white;
     border-top: 1px solid $light-grey;
@@ -62,5 +49,12 @@ Footer
         text-align: center;
         padding: 2em 0;
         .title { color: $white; margin: 0; }
+        position: relative;
+        .pay-methods {
+            h6 {margin: 0;}
+            position: absolute;
+            right: 1em;
+            top: 1.5em;
+        }
     }
 }

@@ -52,8 +52,8 @@ if ( $hero_banner != 0 ) {
     </header>
 <?php else: ?>
     <?php if( $hero_title != '' ): ?>
-        <header>
-            <div class="header header-nobg">
+        <header class="header-nobg">
+            <div class="header">
                 <h1><?php echo $hero_title; ?></h1>
             </div>
         </header>
