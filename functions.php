@@ -108,6 +108,8 @@ function woocommerce_support() {
 add_theme_support( 'woocommerce' );
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 
+add_theme_support( 'title-tag' );
+
 function get_artist_name() {
     if( get_field( 'product_artist' ) ) {
         $artist = get_field( 'product_artist' );

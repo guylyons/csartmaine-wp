@@ -13,25 +13,28 @@ get_header(); ?>
 
         <div class="container row">
             <?php the_content(); ?>
-
-            <?php if( have_rows( 'team' )): ?>
-                <section class="team">
+        </div>
+        <?php if( have_rows( 'team' )): ?>
+            <section class="team">
+                <h1>Our Team</h1>
+                <div class="container row">
                     <?php while( have_rows( 'team' )): the_row(); ?>
                         <?php $image = get_sub_field( 'profile_picture' ); ?>
                         <div class="team__member">
-                            <img class="profile-picture" src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo get_sub_field( 'team_name' ); ?>" />
+                            <img class="profile-picture" src="<?php echo $image['url']; ?>" alt="<?php echo get_sub_field( 'team_name' ); ?>" />
                             <div class="team__member-content">
                                 <h3><?php echo get_sub_field( 'team_name' ); ?></h3>
                                 <?php echo get_sub_field( 'team_content' ); ?>
                             </div>
                         </div>
                     <?php endwhile; ?>
-                </section>
-            <?php endif; ?>
+                </div>
+            </section>
+        <?php endif; ?>
 
-        </div>
+    </div>
 
-    <?php endwhile; endif; ?>
+<?php endwhile; endif; ?>
 
 </div><!-- end content -->
 

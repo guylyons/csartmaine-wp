@@ -64,15 +64,9 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 		<p>
 			All CSArt Maine transactions are securely processed over SSL
 		</p>
-		<p>
-			<?php echo do_shortcode( '[wc_payment_methods]' ); ?>
-		</p>
-		<p>
-			<script language="JavaScript" type="text/javascript">
-                TrustLogo("https://csartmaine.dev:8888/comodo.png", "CL1", "none");
-                </script>
-			<a id="comodoTL" href="https://www.instantssl.com/">Essential SSL</a>
-		</p>
+		<script language="JavaScript" type="text/javascript">
+            TrustLogo("https://csartmaine.org/comodo.png", "CL1", "none");
+        </script>
 	</section>
 
 	<?php do_action( 'woocommerce_checkout_after_order_review' ); ?>

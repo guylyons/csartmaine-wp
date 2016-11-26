@@ -31,11 +31,11 @@ get_header();
         <?php endif; ?>
     </section>
 
-    <!-- <section class="container">
-        <section class="row">
-            <?php get_template_part( 'parts/recent', 'posts' ); ?>
-        </section>
-    </section> -->
+    <section class="introduction">
+        <div class="introduction__content">
+            <?php the_content(); ?>
+        </div>
+    </section>
 
     <section class="container row">
         <?php
@@ -60,17 +60,19 @@ get_header();
 
             ?>
             <section class="meet-the-artist row">
+                <section class="image-doubler--content">
+                    <h1 class="center">Meet an artists</h1>
+                    <hr>
+                    <h4 class="center artist-name"><?php echo $name ?></h4>
+                    <?php echo $bio ?>
+                    <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+                </section>
                 <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
                     <section class="image-doubler--inner">
                         <a href="<?php echo get_permalink(); ?>">
                             <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
                         </a>
                     </section>
-                </section>
-                <section class="image-doubler--content">
-                    <h2>Meet <em><?php echo $name ?></em></h2>
-                    <?php echo $bio ?>
-                    <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
                 </section>
             </section>
 

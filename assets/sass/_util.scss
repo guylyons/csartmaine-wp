@@ -18,7 +18,7 @@ Utilities
 
 .container {
     lost-center: 1200px;
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
         margin-left: 1em;
         margin-right: 1em;
     }
@@ -49,6 +49,11 @@ Utilities
     }
 }
 
+.fullsize {
+    width: 100%;
+    height: auto;
+}
+
 .button {
     border: 1px solid $black;
     padding: 10px 15px;
@@ -67,4 +72,8 @@ Utilities
     display: block;
     width: 30px;
     margin: 10px 0;
+}
+
+.center {
+    text-align: center;
 }

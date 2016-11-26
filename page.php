@@ -17,7 +17,7 @@ get_header(); ?>
 
         <?php else: ?>
 
-            <div class="container row">
+            <div class="blog-container row">
                 <article <?php post_class( 'group page-default' ); ?> role="article">
                     <?php the_content(); ?>
                 </article>
