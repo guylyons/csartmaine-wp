@@ -61,7 +61,7 @@ get_header();
             ?>
             <section class="meet-the-artist row">
                 <section class="image-doubler--content">
-                    <h1 class="center">Meet an artists</h1>
+                    <h1 class="center">Meet an artist</h1>
                     <hr>
                     <h4 class="center artist-name"><?php echo $name ?></h4>
                     <?php echo $bio ?>
