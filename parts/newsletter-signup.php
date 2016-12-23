@@ -13,6 +13,7 @@
                 <input type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe" class="gradient_circle">
             </div>
         </form>
+        <div id="email">&nbsp;</div>
     </div>
 </section>
 

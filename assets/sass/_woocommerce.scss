@@ -22,9 +22,17 @@ WooCommerce
 }
 .woocommerce-message {
     padding: 1em 0;
-    background: $primary-color;
+    background: $secondary-color;
     color: $light-grey;
     text-align: center;
+    .button {
+        display: block;
+        width: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        padding: 5px 20px;
+    }
 }
 .woocommerce-ordering {
     padding: 1em 0;

@@ -5,13 +5,12 @@ get_header();
 ?>
 
 <main role="main" class="main">
-
     <section class="slider row section-1" id="front-page-slider">
         <?php $landing_slider = get_field( 'landing_slider' ); ?>
         <?php if( $landing_slider ): ?>
             <?php while( have_rows( 'landing_slider' )): the_row(); ?>
                 <?php
-                $landing_slider_hero    = get_sub_field( 'landing_slider_hero' );
+                $landing_slider_hero    = get_sub_field( 'landing_slider_hero' );		
                 $landing_slider_url     = $landing_slider_hero['url'];
                 $landing_slider_content = get_sub_field( 'landing_slider_content' );
                 $landing_slider_link    = get_sub_field( 'landing_slider_link' );

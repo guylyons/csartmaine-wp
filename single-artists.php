@@ -7,7 +7,7 @@ $website = get_field( 'artist_website' );
 $bio = get_field( 'artist_bio' );
 $avatar = get_field( 'artist_avatar' );
 if ($avatar) {
-    $avatar = $avatar['sizes']['thumbnail'];
+    $avatar_thumbnail = $avatar['sizes']['thumbnail'];
 }
 $facebook = get_field( 'facebook' );
 $twitter = get_field( 'twitter' );
@@ -24,7 +24,7 @@ get_header(); ?>
         <article class="artist-profile">
             <section class="container">
 
-                <img class="artist-profile__avatar" src="<?php echo $avatar; ?>" alt="<?php the_title(); ?> image">
+                <img class="artist-profile__avatar" src="<?php echo $avatar_thumbnail; ?>" alt="<?php the_title(); ?> image">
 
                 <table class="artist-profile__content">
                     <tbody>

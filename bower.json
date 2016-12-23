@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "normalize-css": "normalize.css#~3.0.3",
+    "normalize-css": "^5.0.0",
     "slick-carousel": "^1.6.0",
     "packery": "^2.1.1",
     "typographic": "^2.9.3"

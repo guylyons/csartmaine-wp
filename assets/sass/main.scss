@@ -17,11 +17,6 @@ a {
 
 body {
     background: #FFFFFF;
-    @media (max-width: 425px) {
-        section:nth-child(1) {
-            margin-top: 1.5em;
-        }
-    }
 }
 
 .panel {
@@ -94,6 +89,13 @@ body {
         position: relative;
         margin-top: 13px;
         margin-right: 11px;
+    }
+    .email-error {
+        background: rgba(255,255,255,0.3);
+        color: $black;
+        font-weight: bold;
+        padding: 20px 10px;
+        margin-top: 1em;
     }
 
     .title {
@@ -334,7 +336,9 @@ Section 2
     background-position: 200% -70%;
     height: 100%;
     width: 100%;
-    lost-column: 1/2;
+    @media (min-width: 769px) {
+        lost-column: 1/2;
+    }
     .image-doubler--inner {
         text-align: center;
         padding: 4em 0;
@@ -346,7 +350,10 @@ Section 2
 }
 
 .image-doubler--content {
-    lost-column: 2/4;
+    @media (min-width: 769px) {
+        lost-column: 2/4;
+    }
+    padding-bottom: 2em;
     .artist-name {
         padding: 5px 0;
         margin-top: 15px;
@@ -856,5 +863,47 @@ hr {
     img {
         width: 60%;
         margin: 0 auto;
+    }
+}
+
+/*=====================================
+    Reminder
+=====================================*/
+.reminder {
+    display: none;
+    z-index: 9999;
+    background: #f9f3bb;
+    padding: 2em;
+    border-radius: 2px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 400px;
+    height: 200px;
+    h3 {
+        font-weight: bold;
+    }
+    .newsletter-form-wrap {
+        display: flex;
+    }
+    .email {
+        border: 0;
+        background: none;
+        border-bottom: 2px solid;
+        padding-left: 0;
+        color: $black;
+        width: 100%;
+        &:focus {
+            box-shadow: 0;
+            outline: 0;
+        }
+    }
+    .submit {
+        border: 0;
+        background: none;
+        padding: 0;
+        position: relative;
+        top: 10px;
+        left: -25px;
     }
 }

@@ -42,15 +42,15 @@ gulp.task('serve', ['browser-sync', 'watch']);
 
 gulp.task('browser-sync', function () {
     var files = [
-	'**/*.php',
-	'assets/css/**/*.css',
-	'assets/imgs/**/*',
-	'assets/js/**/*.js'
+    	'**/*.php',
+    	'assets/css/**/*.css',
+    	'assets/imgs/**/*',
+    	'assets/js/**/*.js'
     ];
 
     browserSync.init(files, {
-	proxy: 'csartmaine.dev:8888',
-	notify: false
+    	proxy: 'csartmaine.dev:8888',
+    	notify: false
     });
 });
 

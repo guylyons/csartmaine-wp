@@ -2,6 +2,18 @@
 
 jQuery(document).ready(function ($) {
 
+    $(".nav-mobile__toggle").click(function () {
+        $(".nav-mobile").toggleClass('toggle');
+        $(this).toggleClass("nav-mobile__toggle-transition");
+    });
+    // email form validation
+    $("#mc-embedded-subscribe-form").on('submit', function (e) {
+        if( $('.email').val() == '' ) {
+            $("#email").addClass('email-error').html("Please enter your email address before hitting submit!");
+            return false;
+        }
+    });
+
     $(".nav-close").click(function () {
         $('.nav .nav--mobile').slideUp();
     });
@@ -39,32 +51,4 @@ jQuery(document).ready(function ($) {
             }
         });
     });
-
-    var triangleImage = document.querySelector('.triangle-image'),
-        recentPosts = document.querySelector('.recent-posts');
-
-    if (recentPosts) {
-
-        recentPosts.addEventListener('mouseover', function (e) {
-
-            var target = event.target,
-                targetClass = target.className,
-                targetClassParent = target.parentElement.className;
-
-            if (targetClass === 'recent-posts__link') {
-                var targetClassElement = target.getAttribute('data-img-url');
-
-                if (targetClassElement !== null) {
-                    triangleImage.style.backgroundImage = 'url(' + targetClassElement + ')';
-                }
-
-                // } else if( targetClassParent === 'recent-posts__item' ) {
-                //     var targetClassParentElement = target.parentElement.getAttribute('data-img-url');
-                //
-                //     if( targetClassParentElement !== null ) {
-                //         triangleImage.style.backgroundImage = 'url(' + targetClassParentElement + ')';
-                //     }
-            }
-        });
-    }
 });

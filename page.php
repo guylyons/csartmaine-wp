@@ -3,6 +3,10 @@
  * Default Page Template
  *
  */
+
+ // This way we only use the narrow container on select pages.
+ // of course there is a better way to do this. So come back and fix it!
+
 get_header(); ?>
 
 <div class="content-wrap page-content" role="main">

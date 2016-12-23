@@ -17,17 +17,17 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+    exit; // Exit if accessed directly
 }
 
 if ( ! $messages ){
-	return;
+    return;
 }
 
 ?>
 
 <?php foreach ( $messages as $message ) : ?>
 </section>
-	<div class="woocommerce-message"><?php echo wp_kses_post( $message ); ?></div>
+<div class="woocommerce-message"><?php echo wp_kses_post( $message ); ?></div>
 <section class="container single-product-container">
 <?php endforeach; ?>

@@ -57,11 +57,6 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
                 echo '</ul>';
             }
             ?>
-
-            <section class="container row">
-                <h4>@csartmaine Instagram</h4>
-                <?php echo wdi_feed(array('id'=>'1')); ?>
-            </section>
         </article>
 
         <section class="post-comments">
