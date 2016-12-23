@@ -42,3 +42,5 @@ assets/css
 auto-save-list
 tramp
 .\#*
+
+yarn.lock
