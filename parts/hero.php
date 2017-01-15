@@ -25,7 +25,7 @@ if ( is_shop() || is_product()  ) {
 }
 
 if ( $hero_banner != 0 ) {
-    $hero_url = $hero_banner['url'];
+    $hero_url = $hero_banner['sizes']['hero'];
 }
 
 ?>

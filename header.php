@@ -22,7 +22,7 @@ function title() {
 <!DOCTYPE html>
 <html id="top">
 
-<?php if( is_shop() ): ?>
+<?php if( is_page( 'checkout' ) ): ?>
     <!-- comodo verify -->
     <script type="text/javascript"> //<![CDATA[
     var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
@@ -32,10 +32,10 @@ function title() {
 <?php endif; ?>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo title() ?> | CSArt Maine</title>
-    <?php wp_head(); ?>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title><?php wp_title() ?> | CSArt Maine</title>
+<?php wp_head(); ?>
 </head>
 
 <nav class="nav nav--mobile">
@@ -44,7 +44,7 @@ function title() {
 
 <body <?php body_class() ?>>
 
-    <section class="special-event">
+    <section class="special-event" style="display: none;">
         <div class="row">
             <div>There's something exciting happening! <a href="#">find out more</a>.</div>
         </div>

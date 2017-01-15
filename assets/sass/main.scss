@@ -329,7 +329,8 @@ Section 2
 /*=====================================
     Section 3
 =====================================*/
-
+.meet-the-artist {
+}
 .image-doubler--outer {
     position: relative;
     background-size: 70%;
@@ -664,12 +665,10 @@ hr {
     .artist-item {
         color: $white;
         text-align: left;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         position: relative;
         lost-column: 1/3;
         background: $black;
-        // width: calc(100% / 8);
-        // float: left;
         @media (max-width: 800px) {
             lost-column: 1/2;
         }
@@ -699,7 +698,6 @@ hr {
             height: 550px;
             width: 100%;
             position: relative;
-            border-radius: 2px;
         }
         .artist-item__name {
             color: $white;

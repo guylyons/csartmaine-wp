@@ -10,8 +10,8 @@ get_header();
         <?php if( $landing_slider ): ?>
             <?php while( have_rows( 'landing_slider' )): the_row(); ?>
                 <?php
-                $landing_slider_hero    = get_sub_field( 'landing_slider_hero' );		
-                $landing_slider_url     = $landing_slider_hero['url'];
+                $landing_slider_hero    = get_sub_field( 'landing_slider_hero' );
+                $landing_slider_url     = $landing_slider_hero['sizes']['hero'];
                 $landing_slider_content = get_sub_field( 'landing_slider_content' );
                 $landing_slider_link    = get_sub_field( 'landing_slider_link' );
                 $slider_button_text     = get_sub_field( 'slider_button_text' );
@@ -64,7 +64,9 @@ get_header();
                     <hr>
                     <h4 class="center artist-name"><?php echo $name ?></h4>
                     <?php echo $bio ?>
-                    <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+                    <div class="center">
+                        <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+                    </div>
                 </section>
                 <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
                     <section class="image-doubler--inner">

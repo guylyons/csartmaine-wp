@@ -7,13 +7,14 @@
 </div>
 
 <?php
+// FIXME: make the term dynamic via ACF
 $args = array(
     'post_type'  =>  'artists',
     'tax_query'  =>  array(
         array(
             'taxonomy'    =>    'season',
             'field'       =>    'slug',
-            'terms'       =>    'S3'
+            'terms'       =>    'S4'
         ),
     )
 );
@@ -24,7 +25,7 @@ $artist_query = new WP_Query( $args );
     <div class="container">
         <div class="row">
             <?php get_template_part( 'parts/season-select' ); ?>
-            <h2>Season: S3</h2>
+            <h2>Season: S4</h2>
             <div class="artist-index">
                 <?php while( $artist_query->have_posts() ) : $artist_query->the_post(); ?>
                     <?php get_template_part( 'parts/artist-index-content' ); ?>
