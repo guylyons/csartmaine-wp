@@ -62,6 +62,38 @@ function title() {
             <nav class="nav-primary">
                 <?php csart_primary_nav(); ?>
             </nav><!-- .nav-primary -->
+        </div>
+            <section id="artists-dropdown" class="artists-dropdown">
+                <div class="artist-dropdown__season">
+                    Season 4
+                </div>
+                <a class="item" href="/artists">
+                    <span class="artists-index">
+                        Index
+                    </span>
+                </a>
+                <?php
+                $args = array(
+                    'post_type'  =>  'artists',
+                    'tax_query'  =>  array(
+                        array(
+                            'taxonomy'    =>    'season',
+                            'field'       =>    'slug',
+                            'terms'       =>    'S4'
+                        ),
+                    )
+                );
+
+                $artists = get_posts( $args );
+
+                foreach( $artists as $artist ) : ?>
+                    <a class="item" href="<?php the_permalink( $artist->ID ); ?>">
+                        <span class="artist-name">
+                            <?php echo $artist->post_title; ?>
+                        </span>
+                    </a>
+                <?php endforeach; ?>
+            </section>
 
             <nav class="nav-primary-scroll">
                 <a href="#top">

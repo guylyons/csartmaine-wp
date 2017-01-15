@@ -2,6 +2,12 @@
 
 jQuery(document).ready(function ($) {
 
+    $("#menu-item-147").click(function(event) {
+        event.preventDefault();
+        $("#artists-dropdown").toggleClass('artists-dropdown--toggle');
+        $(this).toggleClass('active');
+    });
+
     $(".nav-mobile__toggle").click(function () {
         $(".nav-mobile").toggleClass('toggle');
         $(this).toggleClass("nav-mobile__toggle-transition");
