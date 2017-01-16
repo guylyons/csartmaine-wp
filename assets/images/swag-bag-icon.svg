@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="266px" height="301px" viewBox="0 0 266 301" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M206.620117,96.0000005 C209.453072,88.3130434 211,80.0038415 211,71.3333333 C211,31.928359 179.061626,0 139.663645,0 L125.336355,0 C85.9368554,0 54,31.9370212 54,71.3333333 C54,80.346014 55.6707777,88.9675738 58.7194473,96.9054504 C61.3856541,96.3126403 64.1572301,96 67.0016502,96 L206.620121,96 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="157" height="96.9054504" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <path d="M15.9495079,92.997108 C17.0757858,80.296156 28.2918856,70 41.0001468,70 L224.999853,70 C237.702484,70 248.92379,80.2914074 250.050492,92.997108 C250.050492,92.997108 272.070312,234.375 263.442239,260.002892 C254.814166,285.630784 228.050628,301.546875 132.999994,300.683594 C37.9493595,299.820313 11.322553,284.470628 2.5577609,260.002892 C-6.20703125,235.535156 15.9495079,92.997108 15.9495079,92.997108 Z" id="path-3"></path>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="264.940395" height="230.717026" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <use id="Combined-Shape" stroke="#000000" mask="url(#mask-2)" stroke-width="36" xlink:href="#path-1"></use>
+        <use id="Rectangle" stroke="#000000" mask="url(#mask-4)" stroke-width="20" fill="#000000" xlink:href="#path-3"></use>
+        <text id="BAG" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="72" font-weight="normal" fill="#FFFFFF">
+            <tspan x="55.4707031" y="223">BAG</tspan>
+        </text>
+        <text id="SWAG" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="36" font-weight="normal" fill="#FFFFFF">
+            <tspan x="77.3564453" y="165">SWAG</tspan>
+        </text>
+    </g>
+</svg>

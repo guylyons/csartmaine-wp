@@ -378,8 +378,7 @@ Section 4
     position: relative;
     .new-products-image {
         width: 100%;
-        border: 1px solid #ddd;
-        border-bottom: 2px solid #ddd;
+        border-bottom: 2px solid transparent;
         &:hover {
             border-bottom: 2px solid $primary-color;
         }
@@ -433,6 +432,10 @@ Blog Index
                 background-size: cover;
                 background-position: center center;
                 text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+                border-bottom: 2px solid transparent;
+                &:hover {
+                    border-bottom: 2px solid $primary-color;
+                }
                 .index-title {
                     color: $white;
                 }

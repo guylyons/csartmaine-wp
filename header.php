@@ -65,13 +65,7 @@ function title() {
         </div>
             <section id="artists-dropdown" class="artists-dropdown">
                 <div class="artist-dropdown__season">
-                    Season 4
                 </div>
-                <a class="item" href="/artists">
-                    <span class="artists-index">
-                        Index
-                    </span>
-                </a>
                 <?php
                 $args = array(
                     'post_type'  =>  'artists',
@@ -85,14 +79,30 @@ function title() {
                 );
 
                 $artists = get_posts( $args );
+                $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
                 foreach( $artists as $artist ) : ?>
+                <?php
+                $artist_link = get_the_permalink( $artist->ID );
+                if( $actual_link == $artist_link ) {
+                    $active_result = "active";
+                } else {
+                    $active_result = "";
+                }
+                ?>
                     <a class="item" href="<?php the_permalink( $artist->ID ); ?>">
-                        <span class="artist-name">
+                        <span class="artist-name <?php echo $active_result; ?>">
                             <?php echo $artist->post_title; ?>
                         </span>
                     </a>
                 <?php endforeach; ?>
+                <?php if( !is_page( 'artists' )): ?>
+                    <a class="item" href="/artists">
+                        <span class="artists-index">
+                            More...
+                        </span>
+                    </a>
+                <?php endif; ?>
             </section>
 
             <nav class="nav-primary-scroll">

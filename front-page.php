@@ -81,9 +81,8 @@ get_header();
 
     </section>
 
-    <?php get_template_part( 'parts/newsletter-signup' ); ?>
-
     <?php get_template_part( 'parts/recent-products' ); ?>
+    <?php get_template_part( 'parts/newsletter-signup' ); ?>
 
     </section><!-- end container -->
 </main>

@@ -79,11 +79,14 @@ Product Index
         @media (max-width: 600px) {
             lost-column: 1/2;
         }
+        &:hover img {
+            border: 1px solid $primary-color;
+        }
         img {
             width: 100%;
             height: auto;
             border-radius: 2px;
-            border: 1px solid #eee;
+            border: 1px solid transparent;
          }
         h3 {
             margin-top: 0;
