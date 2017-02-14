@@ -43,11 +43,15 @@ WooCommerce
     }
 }
 .woocommerce-result-count { display: none; }
-.woocommerce-ordering {
-    .orderby {
-        background: $white !important;
-        border: 1px solid #DDD;
-    }
+.woocommerce-ordering .orderby, .variations .value select {
+    background: $white;
+    color: $secondary-color;
+    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    border: 2px solid $secondary-color;
+}
+
+.variations .value select {
+  height: 30px;
 }
 
 .woocommerce-breadcrumb {
@@ -210,4 +214,29 @@ Product Single
         display: inline-block;
         margin-left: 10px;
     }
+}
+
+/*==========================================
+    Variations
+==========================================*/
+.variations {
+  .label, .label label {
+    padding: 0;
+    background: $black;
+    color: $white;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .value {
+  }
+  .reset_variations {
+    margin-left: 5px;
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+.woocommerce-variation-description {
+  border: 1px dotted $black;
+  padding: 15px;
+  margin-bottom: 15px;
 }
