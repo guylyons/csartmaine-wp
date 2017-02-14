@@ -46,7 +46,7 @@
     <section class="footer__callout">
         <section class="container">
             <h5 class="title">
-                Made by creative people <em>for</em> creative people.
+                <?php get_template_part( 'parts/quote-master' ); ?>
             </h5>
             <div style="color: #404040;">
                 © 2016 CSArt Maine, LLC.

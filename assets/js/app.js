@@ -29,7 +29,9 @@ jQuery(document).ready(function ($) {
         // prevArrow: "<span class='slick-prev'>◀</span>",
         // nextArrow: "<span class='slick-next'>▶</span>"
         prevArrow: "<i class='material-icons slick-prev'>chevron_left</i>",
-        nextArrow: "<i class='material-icons slick-next'>chevron_right</i>"
+        nextArrow: "<i class='material-icons slick-next'>chevron_right</i>",
+        autoplay: true,
+        autoplaySpeed: 5000
     });
 
     $(window).scroll(function () {
