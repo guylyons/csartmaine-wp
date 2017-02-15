@@ -1,5 +1,5 @@
 {
-  "name": "csart-theme",
+  "name": "Loma",
   "version": "1.0.0",
   "description": "Custom theme for CSArt Maine",
   "main": "index.js",
@@ -30,7 +30,8 @@
     "jshint": "^2.9.2",
     "lost": "^7.0.3",
     "pace-progress": "^1.0.2",
-    "postcss-import": "^8.1.2"
+    "postcss-import": "^8.1.2",
+    "sass-lint": "^1.10.2"
   },
   "dependencies": {
     "gulp-imagemin": "^3.0.2",

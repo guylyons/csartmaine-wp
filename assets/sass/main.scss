@@ -342,6 +342,13 @@ Section 3
     width: 100%;
     height: auto;
   }
+  .left-block {
+    lost-offset: -1/12;
+    lost-column: 6/12;
+  }
+  .right-block {
+    lost-column: 4/12;
+  }
 }
 
 /*=====================================

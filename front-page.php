@@ -59,16 +59,15 @@ get_header();
 
             ?>
             <section class="meet-the-artist row">
-                <section class="half">
-                    <h1 class="center">Meet an artist</h1>
-                    <hr>
-                    <h4 class="center artist-name"><?php echo $name ?></h4>
+                <section class="left-block">
+                    <h1>Meet an artist</h1>
+                    <h4 class="artist-name"><?php echo $name ?></h4>
                     <?php echo $bio ?>
-                    <div class="center">
+                    <div>
                         <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
                     </div>
                 </section>
-                <section class="half">
+                <section class="right-block">
                     <a href="<?php echo get_permalink(); ?>">
                         <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
                     </a>

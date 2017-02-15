@@ -4,76 +4,84 @@ Utilities
 // @lost gutter 5px;
 
 .row, .products {
-    lost-utility: clearfix;
-    margin-bottom: 20px;
+  lost-utility: clearfix;
+  margin-bottom: 20px;
 }
 
 .blog-container {
-    lost-center: 700px;
-    @media (max-width: 800px) {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
+  lost-center: 700px;
+  @media (max-width: 800px) {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 .container {
-    lost-center: 1200px;
-    @media (max-width: 1200px) {
-        margin-left: 1em;
-        margin-right: 1em;
-    }
+  lost-center: 1200px;
+  @media (max-width: 1200px) {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
 }
 
 .full {
-    lost-column: 1;
+  lost-column: 1;
 }
 
 .half {
-    @media (min-width: 768px) {
-        lost-column: 1/2;
-    }
+  @media (min-width: 768px) {
+    lost-column: 1/2;
+  }
 }
 
 .third {
-    lost-column: 1/3;
+  lost-column: 1/3;
 }
 
 .fifth {
-    lost-column: 1/5;
+  lost-column: 1/5;
 }
 
 .quarter {
-    lost-column: 1/4;
-    @media (max-width: 800px) {
-        lost-column: 1/2;
-    }
+  lost-column: 1/4;
+  @media (max-width: 800px) {
+    lost-column: 1/2;
+  }
 }
 
 .fullsize {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .button {
-    border: 1px solid $black;
-    padding: 10px 15px;
-    font-family: $avenir;
-    background: none;
-    color: $black;
-    &:hover {
-        background: $black;
-        color: $white;
-    }
+  border: 1px solid $black;
+  padding: 10px 15px;
+  font-family: $avenir;
+  background: none;
+  color: $black;
+  &:hover {
+    background: $black;
+    color: $white;
+  }
 }
 
 .tiny-hr {
-    height: 2px;
-    background: $white;
-    display: block;
-    width: 30px;
-    margin: 10px 0;
+  height: 2px;
+  background: $white;
+  display: block;
+  width: 30px;
+  margin: 10px 0;
 }
 
 .center {
-    text-align: center;
+  text-align: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
 }
