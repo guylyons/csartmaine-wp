@@ -26,7 +26,18 @@ get_header( 'shop' );
 <?php get_template_part( 'parts/hero' ); ?>
 
 <section class="container shop-wrap">
-
+    <aside>
+        <ul>
+            <?php
+            $categories = get_categories( array( 'taxonomy' => 'product_cat' ) );
+            foreach($categories as $cat): ?>
+                <?php $term = get_term( $cat->term_id ); ?>
+                <li>
+                    <a href="<?php echo get_term_link( $term->term_id ); ?>"><?php echo $term->name; ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </aside>
     <?php
     /**
     * woocommerce_before_main_content hook.
@@ -110,7 +121,6 @@ get_header( 'shop' );
     */
     // do_action( 'woocommerce_sidebar' );
     ?>
-
 </section>
 
 <?php get_template_part( 'parts/newsletter-signup' ); ?>
