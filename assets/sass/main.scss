@@ -124,10 +124,12 @@ Section 1: Front Page Slider
 //     z-index: 9999;
 // }
 .slider {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  @extend .container;
-  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.15);
+  // margin-top: 2em;
+  // margin-bottom: 2em;
+  // @extend .container;
+  // box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-bottom: 0;
   .slider-content {
     padding: 2em;
     flex-direction: column;
@@ -566,7 +568,7 @@ hr {
 }
 
 .hero-image {
-  @extend .container;
+  // @extend .container;
   position: relative;
   width: 100%;
   height: 250px;
