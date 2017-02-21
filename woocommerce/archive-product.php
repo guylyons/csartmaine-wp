@@ -56,15 +56,17 @@ do_action( 'woocommerce_before_main_content' );
 
 <?php endif; ?>
 
-<?php
-/**
-* woocommerce_archive_description hook.
-*
-* @hooked woocommerce_taxonomy_archive_description - 10
-* @hooked woocommerce_product_archive_description - 10
-*/
-do_action( 'woocommerce_archive_description' );
-?>
+<div class="row">
+    <?php
+    /**
+    * woocommerce_archive_description hook.
+    *
+    * @hooked woocommerce_taxonomy_archive_description - 10
+    * @hooked woocommerce_product_archive_description - 10
+    */
+    do_action( 'woocommerce_archive_description' );
+    ?>
+</div>
 
 <?php woocommerce_breadcrumb(); ?>
 <?php woocommerce_product_subcategories(); ?>
