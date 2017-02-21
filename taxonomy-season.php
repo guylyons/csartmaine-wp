@@ -14,11 +14,11 @@ get_header(); ?>
     <section class="artist-index-wrap">
         <div class="container">
             <div class="row">
-                <?php get_template_part( 'parts/season-select' ); ?>
+                <?php get_template_part( 'parts/artists/season-select' ); ?>
                 <div class="artist-index">
                     <?php while( have_posts() ) : the_post(); ?>
 
-                        <?php get_template_part( 'parts/artist-index-content' ); ?>
+                        <?php get_template_part( 'parts/artists/content' ); ?>
 
                     <?php endwhile; ?>
 
