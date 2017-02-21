@@ -19,7 +19,7 @@ get_header(); ?>
                 <?php endif; ?>
                 <?php get_template_part( 'parts/page', 'artist' ); ?>
             <?php else: ?>
-                <?php get_template_part( 'parts/single', 'blog' ); ?>
+                <?php get_template_part( 'parts/blog/single' ); ?>
             <?php endif; ?>
 
             <?php get_template_part( 'parts/recent-products' ); ?>

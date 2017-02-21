@@ -10,17 +10,10 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "components",
-    "test",
-    "tests"
+    "components"
   ],
   "dependencies": {
     "normalize-css": "^5.0.0",
     "slick-carousel": "^1.6.0",
-    "packery": "^2.1.1",
-    "typographic": "^2.9.3"
-  },
-  "devDependencies": {
-    "foundation": "^5.5.3"
   }
 }

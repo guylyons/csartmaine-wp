@@ -15,7 +15,7 @@ get_header();
                 <section class="row">
 
                     <?php while( have_posts() ) : the_post(); ?>
-                        <?php get_template_part( 'parts/index', 'blog' ); ?>
+                        <?php get_template_part( 'parts/blog/index' ); ?>
                     <?php endwhile; ?>
 
                 </section>

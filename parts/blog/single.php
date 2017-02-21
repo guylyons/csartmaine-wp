@@ -25,7 +25,7 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
                 <?php if( $subhead ) { echo '<h5 class="post-subhead">' . $subhead . '</h5>'; } ?>
             </header>
             <section class="post-tags">
-                <?php get_template_part( 'parts/post', 'tags' ); ?>
+                <?php get_template_part( 'parts/blog/tags' ); ?>
             </section>
             <article class="post-article">
                 <?php the_content(); ?>
