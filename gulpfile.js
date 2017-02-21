@@ -7,12 +7,11 @@ var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 var babel = require('gulp-babel');
 
-// Sass
-gulp.task('sass', function() {
+gulp.task('sass', () => {
   return gulp.src('assets/sass/**/*.scss')
   .pipe(sass.sync().on('error', sass.logError))
   .pipe(autoprefixer({
-    browsers: ['last 2 versions'],
+    browsers: ['last 3 versions'],
     cascade: false}))
     .pipe(postcss([
       lost()
@@ -21,7 +20,6 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./assets/css'));
 });
 
-  // Babel.js
 gulp.task('babel', () => {
   return gulp.src('assets/src/app.js')
   .pipe(babel({
@@ -30,15 +28,14 @@ gulp.task('babel', () => {
   .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('watch', function() {
-  gulp.watch('assets/sass/**/*.scss', ['sass']),
+gulp.task('watch', () => {
+  gulp.watch('assets/sass/**/*.scss', ['sass']);
   gulp.watch('assets/src/**/*.js', ['babel']);
 });
 
-// BrowserSync
 gulp.task('serve', ['browser-sync', 'watch']);
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
   var files = [
     '**/*.php',
     'assets/css/**/*.css',
@@ -52,3 +49,4 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('default', ['serve']);
+gulp.task('compile', ['babel']);
