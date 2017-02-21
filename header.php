@@ -1,40 +1,15 @@
 <?php
 // header.php
-
 $logo = get_field( 'logo', 8 );
 $logo = $logo['sizes']['large'];
-
-function title() {
-    if( is_blog() ) {
-        return 'Blog';
-    } else if( is_shop() ) {
-        return 'Shop';
-    } else if( is_page( 'artists' ) ) {
-        return 'Artist';
-    } else if ( is_front_page() ) {
-	return "Community Supported Art Maine";
-    } else {
-        return get_the_title();
-    }
-}
 ?>
 
 <!DOCTYPE html>
 <html id="top">
-
-<?php if( is_page( 'checkout' ) ): ?>
-    <!-- comodo verify -->
-    <script type="text/javascript"> //<![CDATA[
-    var tlJsHost = ((window.location.protocol == "https:") ? "https://secure.comodo.com/" : "http://www.trustlogo.com/");
-    document.write(unescape("%3Cscript src='" + tlJsHost + "trustlogo/javascript/trustlogo.js' type='text/javascript'%3E%3C/script%3E"));
-    //]]>
-    </script>
-<?php endif; ?>
-
+<?php get_template_part( 'parts/comodo' ) ?>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title><?php wp_title() ?> | CSArt Maine</title>
 <?php wp_head(); ?>
 </head>
 

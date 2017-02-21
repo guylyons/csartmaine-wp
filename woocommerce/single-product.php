@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
+
+<?php get_template_part( 'parts/hero' ); ?>
+
 <section class="container single-product-container">
 	<?php
 		/**

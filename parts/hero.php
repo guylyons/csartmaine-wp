@@ -12,7 +12,7 @@ if( is_blog() ) {
     $custom_title = get_field( 'custom_title', $index_id );
     $custom_color = get_field( 'title_color', $index_id );
 } else
-if ( is_shop() || is_product()  ) {
+if ( is_shop() || is_product() || is_product_category()  ) {
     $hero_banner = get_field( 'hero_banner', $shop_id );
     $hero_title  = get_the_title( $shop_id );
     $custom_title = get_field( 'custom_title', $shop_id );
@@ -33,7 +33,6 @@ if ( $hero_banner != 0 ) {
 <?php if( $hero_url ): ?>
     <header>
         <div class="hero-image" style="background-image: url('<?php echo $hero_url; ?>');">
-            <!-- echo the image here. -->
             <?php if( $custom_color ): ?>
                 <style>
                     .header h1 { background: <?php echo $custom_color; ?>; }

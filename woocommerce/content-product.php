@@ -27,10 +27,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-$product_column_width = get_field( 'product_column_width' );
+$column_width = 'col4';
 ?>
 
-<li <?php post_class( 'col3' ); ?>>
+<li <?php post_class( $column_width ); ?>>
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
