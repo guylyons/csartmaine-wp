@@ -1,11 +1,10 @@
 {
   "name": "Loma",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Custom theme for CSArt Maine",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build",
-    "serve": "gulp serve"
+    "serve": "node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "author": "Guy Lyons",
   "license": "MIT",

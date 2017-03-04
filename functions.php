@@ -28,7 +28,6 @@ function csart_enqueue_scripts() {
     wp_register_script( 'Evil Icons', 'https://cdn.jsdelivr.net/evil-icons/1.8.0/evil-icons.min.js', true, '1.7.8' );
     wp_register_script( 'Slick Carousel', get_template_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), '1.6.0', true );
 
-    wp_enqueue_script( 'jquery-masonry' );
     wp_enqueue_script( 'Evil Icons' );
     wp_enqueue_script( 'Slick Carousel' );
     wp_enqueue_script( 'csart-global' );
