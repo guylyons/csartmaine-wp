@@ -1,9 +1,49 @@
-var path = require('path');
+const path = require('path')
+const webpack = require('webpack')
 
-module.exports = {
-  entry: './frontend/entry.js',
+const config = {
+  devtool: 'cheap-eval-source-map',
+  entry:  {
+    main: './frontend/entry.js',
+  },
   output: {
-    filename: './js/bundle.js',
-    path: path.resolve(__dirname, 'assets')
-  }
-};
+    path: path.resolve(__dirname, 'assets/js/'),
+    filename: 'bundle.js',
+  },
+  devServer: {
+    compress: true,
+    port: 9000
+  },
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          // vue-loader options
+        }
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin()
+  ],
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.common.js'
+    }
+  },
+  performance: {
+    hints: false
+  },
+}
+
+module.exports = config

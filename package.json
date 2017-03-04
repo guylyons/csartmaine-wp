@@ -23,7 +23,9 @@
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "lost": "latest",
-    "postcss-import": "latest"
+    "postcss-import": "latest",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10"
   },
   "dependencies": {
     "css-loader": "^0.26.2",
@@ -31,6 +33,7 @@
     "vue-loader": "^11.1.4",
     "vue-router": "^2.3.0",
     "vue-template-compiler": "^2.2.1",
-    "webpack": "^2.2.1"
+    "webpack": "latest",
+    "webpack-dev-server": "latest"
   }
 }
