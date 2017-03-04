@@ -6,8 +6,9 @@ var postcss = require('gulp-postcss');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
 var babel = require('gulp-babel');
+var uglify = require('gulp-uglify');
 
-gulp.task('sass', () => {
+gulp.task('sass', function() {
   return gulp.src('assets/sass/**/*.scss')
   .pipe(sass.sync().on('error', sass.logError))
   .pipe(autoprefixer({
@@ -20,22 +21,23 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('babel', () => {
+gulp.task('babel', function() {
   return gulp.src('assets/src/app.js')
   .pipe(babel({
     presets: ['es2015']
   }))
+  .pipe(uglify())
   .pipe(gulp.dest('assets/js'));
 });
 
-gulp.task('watch', () => {
+gulp.task('watch', function() {
   gulp.watch('assets/sass/**/*.scss', ['sass']);
   gulp.watch('assets/src/**/*.js', ['babel']);
 });
 
 gulp.task('serve', ['browser-sync', 'watch']);
 
-gulp.task('browser-sync', () => {
+gulp.task('browser-sync', function() {
   var files = [
     '**/*.php',
     'assets/css/**/*.css',
