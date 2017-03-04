@@ -22,7 +22,10 @@
     "gulp-postcss": "latest",
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
-    "postcss-import": "latest",
-    "lost": "latest"
+    "lost": "latest",
+    "postcss-import": "latest"
+  },
+  "dependencies": {
+    "webpack": "^2.2.1"
   }
 }
