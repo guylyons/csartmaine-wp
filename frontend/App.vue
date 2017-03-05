@@ -1,10 +1,9 @@
 <template lang="html">
   <section class="app-test">
-     {{ message }}
-     <hr>
-     <router-link to="/application" class="button button--rounded">Application</router-link>
-     <hr>
-     <router-view></router-view>
+      <ul>
+         {{ posts }}
+         <li>test</li>
+      </ul>
   </section>
 </template>
 
@@ -12,16 +11,18 @@
 export default {
     data: function() {
         return {
-            message: 'vue test'
+            posts: [{
+                'name': 'Bob',
+                'age': 23
+            }]
         }
     }
 }
 </script>
 
-<style lang="css" scoped>
-.app-test {
-    border: 2px solid red;
-    background: #eee;
-    padding: 3em;
-}
+<style lang="sass" scoped>
+    ul
+        border: 1px solid red
+        li
+            border: 2px solid green
 </style>
