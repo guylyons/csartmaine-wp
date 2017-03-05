@@ -14,14 +14,8 @@ const router = new VueRouter({
   ]
 })
 
-var el = document.querySelector('#app')
-if(el != undefined) {
-
-  var vm = new Vue({
-    router,
-    el: '#app',
-    render: h => h(App)
-  })
-
-  vm.$mount('#app')
-}
+var vm = new Vue({
+  router,
+  el: '#app',
+  render: h => h(App)
+})

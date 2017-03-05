@@ -61,6 +61,5 @@
 
 <?php get_template_part( 'parts/google-analytics' ); ?>
 
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/bundle.js"></script>
 </body>
 </html>
