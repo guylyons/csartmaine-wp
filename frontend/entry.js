@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
+import Application from './Application.vue'
 
 Vue.use(VueRouter)
 
@@ -9,7 +10,7 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     { path: '/' },
-    // { path: '/register', component: Register },
+    { path: '/application', component: Application },
     // { path: '/login', component: Login }
   ]
 })
