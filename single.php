@@ -1,5 +1,11 @@
 <?php
-/* single.php template */
+/**
+ * Single Blog Template
+ *
+ *
+ * @since 1.0
+ * @package WordPress
+ */
 
 get_header(); ?>
 
@@ -13,7 +19,7 @@ get_header(); ?>
                 <?php if( $hero_url ): ?>
                     <header>
                         <div class="hero-image" style="background-image: url('<?php echo $hero_url; ?>');">
-                            <!-- echo the image here. -->
+                            <!-- background-image: <?php echo $hero_image; ?> -->
                         </div>
                     </header>
                 <?php endif; ?>

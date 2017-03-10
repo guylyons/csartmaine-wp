@@ -10,7 +10,7 @@ if ( $cat_id ) { $cat = get_category( $cat_id ); }
         <?php if( $hero_url ): ?>
             </section>
                 <header>
-                    <div class="hero-image" style="background-image: url('<?php echo $hero_url; ?>');">
+                    <div class="hero-image full-height" style="background-image: url('<?php echo $hero_url; ?>');">
                         <!-- echo the image here. -->
                     </div>
                 </header>
