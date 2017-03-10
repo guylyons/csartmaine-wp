@@ -21,7 +21,6 @@ gulp.task('sass', function() {
 
 gulp.task('watch', function() {
   gulp.watch('assets/sass/**/*.scss', ['sass'])
-  gulp.watch('assets/src/**/*.js', ['babel'])
 })
 
 gulp.task('serve', ['browser-sync', 'watch'])
@@ -30,8 +29,7 @@ gulp.task('browser-sync', function() {
   var files = [
     '**/*.php',
     'assets/css/**/*.css',
-    'assets/imgs/**/*',
-    'assets/js/**/*.js'
+    'assets/imgs/**/*'
   ]
   browserSync.init(files, {
     proxy: 'csartmaine.dev:8888',

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import App from './App.vue'
 import Application from './Application.vue'
+import './fluff.js'
 
 Vue.use(VueRouter)
 
