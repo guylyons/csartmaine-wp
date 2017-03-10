@@ -9,11 +9,11 @@ add_image_size( 'index_blog', 600, 180, true );
 add_image_size( 'hero', 1280, 400, true );
 
 /* Enqueue Scripts and Styles */
-include('./includes/enqueue.php');
+include('includes/enqueue.php');
 /* Walker Navigation */
-include('./includes/menus.php');
+include('includes/menus.php');
 /* Helper Functions */
-include('./includes/helpers.php');
+include('includes/helpers.php');
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
