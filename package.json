@@ -35,5 +35,9 @@
     "vue-template-compiler": "^2.2.1",
     "webpack": "latest",
     "webpack-dev-server": "latest"
+  },
+  "dependencies": {
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.13.2"
   }
 }
