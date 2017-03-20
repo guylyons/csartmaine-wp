@@ -19,7 +19,6 @@ get_header(); ?>
                 <?php if( $hero_url ): ?>
                     <header>
                         <div class="hero-image" style="background-image: url('<?php echo $hero_url; ?>');">
-                            <!-- background-image: <?php echo $hero_image; ?> -->
                         </div>
                     </header>
                 <?php endif; ?>

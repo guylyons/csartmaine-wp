@@ -280,14 +280,6 @@ Section 2
   }
 }
 
-.post-comments {
-  lost-column: 8/12;
-  @media (max-width: 768px) {
-    lost-column: 10/12;
-    lost-offset: -1/12;
-  }
-}
-
 .triangle-image {
   lost-column: 6/12;
   position: relative;
@@ -410,7 +402,8 @@ Blog Index
 }
 
 .blog-article {
-  lost-column: 8/12;
+  // lost-column: 8/12;
+  lost-center: 700px;
   @media (max-width: 768px) {
     lost-column: 10/12;
     lost-offset: -1/12;
@@ -453,13 +446,6 @@ Blog Index
       }
     }
   }
-  // .index-item:first-of-type {
-  //     lost-column: 1 1;
-  //     lost-utility: clearfix;
-  //     .index-details {
-  //         text-align: center;
-  //     }
-  // }
   .index-item:nth-child(1n) {
     text-align: right;
   }
@@ -524,7 +510,7 @@ Post Single
 }
 
 .post-meta {
-  text-align: center;
+  font-size: 18px;
   .post-avatar {
     width: 100%;
   }
@@ -544,17 +530,15 @@ Post Single
 }
 
 .post-header {
-  background: $white;
-  text-align: center;
+  position: absolute;
+  right: 6em;
+  bottom: 0;
   padding: 3em 0;
+  * { color: $white; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+  .post-meta {
+    margin-bottom: 1em;
+  }
   .post-title {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clear: after;
-    padding: 1em 0;
-    margin: 0;
   }
   .post-date {
     width: 100%;
@@ -562,13 +546,10 @@ Post Single
     font-size: 16px;
     text-transform: uppercase;
   }
-  .post-title, .post-date {
-    text-align: center;
-  }
 }
 
 .post-article {
-  // font-family: "Georgia";
+  margin-top: 5em;
   font-weight: normal;
   &:first-letter {
     float: left;
@@ -577,6 +558,7 @@ Post Single
     line-height: 0.8;
     padding-right: 10px;
     margin-bottom: 15px;
+    margin-top: 12px;
     color: $black;
   }
   a {
