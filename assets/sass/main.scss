@@ -114,7 +114,6 @@ Newsletter
 //     padding-left: 1em;
 //     padding-right: 1em;
 // }
-
 /*=====================================
 Section 1: Front Page Slider
 =====================================*/
@@ -136,10 +135,8 @@ Section 1: Front Page Slider
     position: absolute;
     background: $white;
     @media (min-width: 769px) {
-      top: 30%;
-      left: 0; right: 0;
-      margin-left: auto;
-      margin-right: auto;
+      bottom: 2em;
+      right: 6em;
       max-width: 600px;
       box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
     }
@@ -179,7 +176,7 @@ Section 1: Front Page Slider
     z-index: 5;
     opacity: 0.2;
     transition: opacity .5s;
-    color: $black;
+    color: $white;
     background: rgba(255,255,255,.1);
     padding: 20px 15px;
     &:hover {
@@ -195,7 +192,7 @@ Section 1: Front Page Slider
     right: 0;
   }
   .slick-dots {
-    left: 0; right: 0;
+    left: 0;
     text-align: center;
     margin: 0;
     opacity: .2;
@@ -210,20 +207,15 @@ Section 1: Front Page Slider
   @media (max-width: 768px) {
     .slick-arrow, .slick-dots { display: none !important; }
   }
-  // .button {
-  //     &:after {
-  //         content: "\f19b";
-  //         font-family: "Flaticon";
-  //         margin-left: 10px;
-  //     }
-  // }
 }
 
 // CSArt settings
 .slick-dots {
   position: absolute;
-  bottom: 15px;
+  bottom: 0;
   margin: 0;
+  display: inline-block;
+  text-align: left;
   li {
     display: inline-block;
     margin-right: 5px;
@@ -232,13 +224,13 @@ Section 1: Front Page Slider
       display: block;
       width: 10px;
       height: 10px;
-      border: 1px solid $black;
+      border: 1px solid $white;
       border-radius: 50%;
     }
   }
   .slick-active:before {
     content: "";
-    background: $black;
+    background: $white;
   }
   button { display: none; }
 }
@@ -896,4 +888,11 @@ Reminder
     top: 10px;
     left: -25px;
   }
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  margin: 1em;
+  padding: 2em;
+  background-color: $light-grey;
 }

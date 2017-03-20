@@ -1,4 +1,4 @@
-<section class="container row">
+<section class="container row meet-the-artist">
     <?php
     $args = array(
         'post_type'  =>  'artists',
@@ -21,11 +21,13 @@
 
         ?>
         <section class="col2">
-            <h1>Meet an artist</h1>
-            <h4 class="artist-name"><?php echo $name ?></h4>
-            <?php echo $bio ?>
-            <div>
-                <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+            <div class="header"><h1>Meet an Artist</h1></div>
+            <div class="box-shadow">
+                <h4 class="artist-name"><?php echo $name ?></h4>
+                <?php echo $bio ?>
+                <div>
+                    <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+                </div>
             </div>
         </section>
         <section class="col2">

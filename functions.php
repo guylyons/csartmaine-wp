@@ -7,6 +7,7 @@ add_image_size( 'product_thumb', 500, 500, true );
 add_image_size( 'landing_posts', 800, 600, true );
 add_image_size( 'index_blog', 600, 180, true );
 add_image_size( 'hero', 1280, 400, true );
+add_image_size( 'slider', 860, 500, true );
 
 /* Enqueue Scripts and Styles */
 include('includes/enqueue.php');
