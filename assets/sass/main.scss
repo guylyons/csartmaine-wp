@@ -345,6 +345,38 @@ Section 3
   }
 }
 
+.image-doubler--outer {
+    position: relative;
+    background-size: 70%;
+    background-position: 200% -70%;
+    height: 100%;
+    width: 100%;
+    @media (min-width: 769px) {
+        lost-column: 1/2;
+    }
+    .image-doubler--inner {
+        text-align: center;
+        padding: 4em 0;
+        img {
+            border: 10px solid $white;
+            width: 70%;
+        }
+    }
+}
+
+.image-doubler--content {
+    @media (min-width: 769px) {
+        lost-column: 2/4;
+    }
+    padding-bottom: 2em;
+    .artist-name {
+        padding: 5px 0;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+
 /*=====================================
 Section 4
 =====================================*/

@@ -1,4 +1,4 @@
-<section class="container row meet-the-artist">
+<section class="container row">
     <?php
     $args = array(
         'post_type'  =>  'artists',
@@ -18,22 +18,24 @@
         } else {
             $avatar_url = '';
         }
-
         ?>
-        <section class="col2">
-            <div class="header"><h1>Meet an Artist</h1></div>
-            <div class="box-shadow">
-                <h4 class="artist-name"><?php echo $name ?></h4>
+        <section class="meet-the-artist row">
+            <section class="image-doubler--content">
+                <h1 class="center">Meet an artist</h1>
+                <hr>
+                <h4 class="center artist-name"><?php echo $name ?></h4>
                 <?php echo $bio ?>
-                <div>
+                <div class="center">
                     <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
                 </div>
-            </div>
-        </section>
-        <section class="col2">
-            <a href="<?php echo get_permalink(); ?>">
-                <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
-            </a>
+            </section>
+            <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
+                <section class="image-doubler--inner">
+                    <a href="<?php echo get_permalink(); ?>">
+                        <img src="<?php echo $avatar_url; ?>" alt="<?php echo $name; ?>" />
+                    </a>
+                </section>
+            </section>
         </section>
 
     <?php endwhile; wp_reset_query(); ?>
