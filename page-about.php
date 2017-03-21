@@ -14,6 +14,9 @@ get_header(); ?>
         <div class="container row">
             <?php the_content(); ?>
         </div>
+
+        <?php get_template_part( 'template-parts/recent-products' ); ?>
+        
         <?php if( have_rows( 'team' )): ?>
             <section class="team">
                 <h1>Our Team</h1>
@@ -31,13 +34,12 @@ get_header(); ?>
                 </div>
             </section>
         <?php endif; ?>
-
-    </div>
+</div>
 
 <?php endwhile; endif; ?>
 
 </div><!-- end content -->
 
-<?php // get_sidebar(); ?>
+<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
 <?php get_footer(); ?>

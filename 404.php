@@ -8,12 +8,13 @@ get_header(); ?>
 <div class="content-wrap page-404" role="main">
     <div class="container row">
         <img src="<?php echo get_template_directory_uri() . '/assets/images/404nut.gif' ?>" alt="404 Donut">
-        <h3>asdfg!</h3>
+        <h3>Darn!</h3>
         <p>
-            This page is no longer.
+            We were unable to locate the page you were looking for 😭
         </p>
         <p>
-            So check out our <a href="/shop">Shop</a> for spectacular local art!
+            Perhaps you wanted some art?
+            <a href="/shop" class="button">Shop</a>
         </p>
     </div>
 

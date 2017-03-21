@@ -34,7 +34,7 @@ $product_query = new WP_Query( $args );
                      </a>
                      <?php get_template_part( 'woocommerce/single-product/sale-flash' ); ?>
                  </div>
-            <?php endwhile; ?>
+            <?php endwhile; wp_reset_query(); ?>
 
         </section>
     </section>
