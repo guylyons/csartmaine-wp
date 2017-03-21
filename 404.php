@@ -19,7 +19,7 @@ get_header(); ?>
 
 </div><!-- end content -->
 
-<?php get_template_part( 'parts/recent-products' ); ?>
+<?php get_template_part( 'template-parts/recent-products' ); ?>
 
 <?php // get_sidebar(); ?>
 

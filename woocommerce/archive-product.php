@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' );
 ?>
 
-<?php get_template_part( 'parts/hero' ); ?>
+<?php get_template_part( 'template-parts/hero' ); ?>
 
 <section class="container shop-wrap">
     <aside>
@@ -81,7 +81,7 @@ do_action( 'woocommerce_before_main_content' );
     */
     do_action( 'woocommerce_before_shop_loop' );
     ?>
-    <?php get_template_part( 'parts/shop/custom-landing' ); ?>
+    <?php get_template_part( 'template-parts/shop/custom-landing' ); ?>
 
     <?php woocommerce_product_loop_start(); ?>
 
@@ -137,6 +137,6 @@ do_action( 'woocommerce_after_main_content' );
 
 </section>
 
-<?php get_template_part( 'parts/newsletter-signup' ); ?>
+<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
 <?php get_footer( 'shop' ); ?>

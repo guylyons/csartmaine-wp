@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
-<?php get_template_part( 'parts/hero' ); ?>
+<?php get_template_part( 'template-parts/hero' ); ?>
 
 <section class="container single-product-container">
 	<?php

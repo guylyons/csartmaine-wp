@@ -21,7 +21,7 @@ get_header();
                $landing_slider_link    = get_sub_field( 'landing_slider_link' );
                $slider_button_text     = get_sub_field( 'slider_button_text' );
                ?>
-               <section class="slider-item full-height" style="background-image: url('<?php echo $landing_slider_url; ?>'); ?>')">
+               <section class="slider-item" style="background-image: url('<?php echo $landing_slider_url; ?>'); ?>')">
                    <section class="slider__opacity-layer">
                    </section>
                    <article class="slider-content half">
@@ -41,10 +41,11 @@ get_header();
         </div>
     </section>
 
-    <?php get_template_part( 'parts/meet-the-artist' ); ?>
+    <?php get_template_part( 'template-parts/recent-products' ); ?>
 
-    <?php get_template_part( 'parts/recent-products' ); ?>
-    <?php get_template_part( 'parts/newsletter-signup' ); ?>
+    <?php get_template_part( 'template-parts/meet-the-artist' ); ?>
+
+    <?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
     </section><!-- end container -->
 </main>

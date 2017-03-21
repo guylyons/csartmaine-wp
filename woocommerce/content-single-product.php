@@ -87,6 +87,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
-<?php get_template_part( 'parts/recent-products' ); ?>
+<?php get_template_part( 'template-parts/recent-products' ); ?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

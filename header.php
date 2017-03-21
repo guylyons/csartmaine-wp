@@ -6,7 +6,7 @@ $logo = $logo['sizes']['large'];
 
 <!DOCTYPE html>
 <html id="top">
-<?php get_template_part( 'parts/comodo' ) ?>
+<?php get_template_part( 'template-parts/comodo' ) ?>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />

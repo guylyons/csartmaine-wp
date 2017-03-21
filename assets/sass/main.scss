@@ -176,7 +176,7 @@ Section 1: Front Page Slider
     z-index: 5;
     opacity: 0.2;
     transition: opacity .5s;
-    color: $white;
+    color: $black;
     background: rgba(255,255,255,.1);
     padding: 20px 15px;
     &:hover {
@@ -224,13 +224,13 @@ Section 1: Front Page Slider
       display: block;
       width: 10px;
       height: 10px;
-      border: 1px solid $white;
+      border: 1px solid $black;
       border-radius: 50%;
     }
   }
   .slick-active:before {
     content: "";
-    background: $white;
+    background: $black;
   }
   button { display: none; }
 }
@@ -246,7 +246,6 @@ Section 1: Front Page Slider
   background-color: #f6f6f6;
   text-align: center;
   padding: 4em 0;
-  margin-bottom: 2em;
   .introduction__content {
     lost-center: 500px;
     padding: 1em;
@@ -324,6 +323,7 @@ Section 2
 Section 3
 =====================================*/
 .meet-the-artist {
+  padding-top: 3em;
   img {
     width: 100%;
     height: auto;
@@ -381,6 +381,7 @@ Section 4
   position: relative;
   .new-products-image {
     width: 100%;
+    height: auto;
     border-bottom: 2px solid transparent;
     &:hover {
       border-bottom: 2px solid $primary-color;
@@ -402,16 +403,16 @@ Blog Index
 }
 
 .blog-article {
-  // lost-column: 8/12;
-  lost-center: 700px;
-  @media (max-width: 768px) {
-    lost-column: 10/12;
-    lost-offset: -1/12;
-  }
+  lost-column: 8/12;
   p {
     font-size: 1.2em;
     line-height: 1.75;
   }
+}
+
+aside {
+  lost-column: 4/12;
+  padding-top: 5em;
 }
 
 .blog {

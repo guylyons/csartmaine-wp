@@ -46,7 +46,7 @@
     <section class="footer__callout">
         <section class="container">
             <h5 class="title">
-                <?php get_template_part( 'parts/quote-master' ); ?>
+                <?php get_template_part( 'template-parts/quote-master' ); ?>
             </h5>
             <div style="color: #404040;">
                 © 2016 CSArt Maine, LLC.
@@ -59,7 +59,7 @@
 </footer>
 <?php wp_footer(); ?>
 
-<?php get_template_part( 'parts/google-analytics' ); ?>
+<?php get_template_part( 'template-parts/google-analytics' ); ?>
 
 </body>
 </html>
