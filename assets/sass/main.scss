@@ -430,6 +430,7 @@ aside {
         position: relative;
       }
       .index-details {
+        position: relative;
         height: 150px;
         padding: 1em;
         background: $black;
@@ -438,6 +439,7 @@ aside {
         background-position: center center;
         text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
         border-bottom: 2px solid transparent;
+        z-index: 600;
         &:hover {
           border-bottom: 2px solid $primary-color;
         }
@@ -446,6 +448,13 @@ aside {
         }
       }
     }
+  }
+  .overlay {
+    position: absolute;
+    top: 0; bottom: 0;
+    right: 0; left: 0;
+    background-color: rgba(0,0,0,0.35);
+    z-index: -1;
   }
   .index-item:nth-child(1n) {
     text-align: right;
@@ -532,8 +541,8 @@ Post Single
 
 .post-header {
   position: absolute;
-  right: 6em;
-  bottom: 0;
+  left: 2em;
+  bottom: -6em;
   padding: 3em 0;
   * { color: $white; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
   .post-meta {
