@@ -81,7 +81,10 @@ do_action( 'woocommerce_before_main_content' );
     */
     do_action( 'woocommerce_before_shop_loop' );
     ?>
-    <?php get_template_part( 'template-parts/shop/custom-landing' ); ?>
+
+    <?php if(!is_product_category()): ?>
+        <?php get_template_part( 'template-parts/shop/custom-landing' ); ?>
+    <?php endif; ?>
 
     <?php woocommerce_product_loop_start(); ?>
 
@@ -90,16 +93,18 @@ do_action( 'woocommerce_before_main_content' );
     $feature_a = get_field( 'feature_a', 139 );
     $feature_b = get_field( 'feature_b', 139 );
 
-    global $product;
-    $args = array(
-        'post_type'    =>    'product',
-        'post__not_in' =>  array(
-            $feature_a->ID,
-            $feature_b->ID
-        )
-    );
+    if(!is_product_category()) {
+        global $product;
+        $args = array(
+            'post_type'    =>    'product',
+            'post__not_in' =>  array(
+                $feature_a->ID,
+                $feature_b->ID
+            )
+        );
 
-    query_posts($args);
+        query_posts($args);
+    }
 
     ?>
 

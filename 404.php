@@ -16,7 +16,7 @@ get_header(); ?>
             Perhaps you wanted some art?
             <a href="/shop" class="button">Shop</a>
         </p>
-    </div>
+    </div><!-- end content -->
 
 </div><!-- end content -->
 
