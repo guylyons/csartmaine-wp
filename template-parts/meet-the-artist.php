@@ -26,7 +26,7 @@
                 <h4 class="center artist-name"><?php echo $name ?></h4>
                 <?php echo $bio ?>
                 <div class="center">
-                    <a href="<?php echo get_permalink(); ?>" class="button">Learn More</a>
+                    <a href="/artists" class="button">Learn More</a>
                 </div>
             </section>
             <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
