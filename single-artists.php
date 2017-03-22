@@ -91,6 +91,29 @@ get_header(); ?>
                     </nav>
                 <?php endif; ?>
 
+                <div class="row">
+                    <?php
+                    $args = array(
+                        'post_type' => 'product',
+                        'posts_per_page' => -1,
+                        'meta_key' => 'related_artist'                        
+                        );
+
+                        $product_query = new WP_Query( $args );
+
+                        if( $product_query->have_posts() ) {
+                            while( $product_query->have_posts() ) {
+                                $product_query->the_post();
+
+                                the_title();
+                            }
+                        } else {
+                            echo 'ut oh';
+                        }
+
+                    ?>
+                </div>
+
             </section>
         </article>
 

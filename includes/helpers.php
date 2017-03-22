@@ -7,15 +7,15 @@
  */
 
 function get_artist_name() {
-    if( get_field( 'product_artist' ) ) {
-        $artist = get_field( 'product_artist' );
+    if( get_field( 'related_artist' ) ) {
+        $artist = get_field( 'related_artist' );
         $artist_meta = get_post_meta( $artist->ID );
 
         echo '<div class="woocommerce-artist-name">';
         echo $artist_meta['artist_name'][0];
         echo '</div>';
     } else {
-        echo "<div>CSArt Maine</div>";
+        /* echo "<div>CSArt Maine</div>"; */
     }
 }
 
@@ -32,18 +32,17 @@ function what_column_width() {
 
 function csart_login_logo() { ?>
     <style type="text/css">
-    .login {
-        border-top: 2px solid #ffd673;
-        background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/pat.png);
-        background-size: 80px;
-    }
-        #login h1 a, .login h1 a {
-            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png);
-            padding-bottom: 30px;
-            padding-bottom: 75px;
-            background-size: cover;
-            width: 160px;
-        }
+     .login {
+       border-top: 2px solid #ffd673;
+       background-size: 80px;
+     }
+     #login h1 a, .login h1 a {
+       background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png);
+       padding-bottom: 30px;
+       padding-bottom: 75px;
+       background-size: cover;
+       width: 160px;
+     }
     </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'csart_login_logo' );
