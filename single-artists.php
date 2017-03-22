@@ -93,24 +93,16 @@ get_header(); ?>
 
                 <div class="row">
                     <?php
-                    $args = array(
-                        'post_type' => 'product',
-                        'posts_per_page' => -1,
-                        'meta_key' => 'related_artist'                        
-                        );
+                    $related_products = get_posts(array(
+	                'numberposts'	=> -1,
+	                'post_type'		=> 'product',
+	                'meta_key'		=> 'related_artist',
+	                'meta_value'	=> $post->ID
+                    ));
 
-                        $product_query = new WP_Query( $args );
-
-                        if( $product_query->have_posts() ) {
-                            while( $product_query->have_posts() ) {
-                                $product_query->the_post();
-
-                                the_title();
-                            }
-                        } else {
-                            echo 'ut oh';
-                        }
-
+                    if( !$related_products == 0 ) {
+                        var_dump( $related_products );
+                    }
                     ?>
                 </div>
 
