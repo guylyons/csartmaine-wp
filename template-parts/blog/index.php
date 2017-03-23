@@ -18,7 +18,6 @@
 				<h2 class="index-title"><?php the_title(); ?></h2>
 				<div class="index-author">By <?php the_author(); ?></div>
 				<div class="index-excerpt"><?php the_excerpt(); ?></div>
-				<div class="overlay"></div>
 			</section>
 		</a>
 

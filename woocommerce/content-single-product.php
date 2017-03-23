@@ -88,6 +88,7 @@ if ( post_password_required() ) {
 
 </div><!-- #product-<?php the_ID(); ?> -->
 
-<?php get_template_part( 'template-parts/recent-products' ); ?>
+</section>
+<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

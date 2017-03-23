@@ -101,7 +101,12 @@ get_header(); ?>
                     ));
 
                     if( !$related_products == 0 ) {
-                        var_dump( $related_products );
+                        foreach($related_products as $product) {
+                            $title = $product->post_title;
+                            $id    = $product->post_id;
+
+                            // echo related product here
+                        }
                     }
                     ?>
                 </div>
