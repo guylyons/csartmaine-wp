@@ -28,7 +28,6 @@ get_header(); ?>
 
                 <table class="artist-profile__content">
                     <tbody>
-
                         <th>
                             <h1><?php echo $name; ?></h1>
                         </th>
@@ -103,13 +102,22 @@ get_header(); ?>
                     if( !$related_products == 0 ) {
                         foreach($related_products as $product) {
                             $title = $product->post_title;
-                            $id    = $product->post_id;
+                            $id    = $product->ID;
+                            $link  = get_the_permalink( $id );
+                            ?>
 
-                            // echo related product here
+                            <div class="artist-related-products">
+                                <div class="related-product">
+                                    <a href="<?php the_permalink( $id ); ?>">
+                                        <?php echo get_the_title( $id ); ?>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <?php
                         }
-                    }
-                    ?>
-                </div>
+                    } ?>
+
 
             </section>
         </article>
