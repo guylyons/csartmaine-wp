@@ -142,10 +142,15 @@ Product Single
 =====================================*/
 
 .single-product {
+  .woocommerce-artist-name {
+    &:hover {
+      text-decoration: underline;
+      color: $primary-color;
+    }
+  }
   .images {
     overflow-y: scroll;
     height: 450px;
-    border: 1px solid $grey;
     lost-column: 1/2;
     position: relative;
 

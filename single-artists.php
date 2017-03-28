@@ -1,6 +1,5 @@
 <?php
 /* single.php template */
-
 $name = get_field( 'artist_name' );
 $medium = get_field( 'artist_medium' );
 $website = get_field( 'artist_website' );
@@ -12,7 +11,6 @@ if ($avatar) {
 $facebook = get_field( 'facebook' );
 $twitter = get_field( 'twitter' );
 $instagram = get_field( 'instagram' );
-
 $next_link = get_next_post_link();
 $prev_link = get_previous_post_link();
 
@@ -20,12 +18,9 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
         <article class="artist-profile">
             <section class="container">
-
                 <img class="artist-profile__avatar" src="<?php echo $avatar_thumbnail; ?>" alt="<?php the_title(); ?> image">
-
                 <table class="artist-profile__content">
                     <tbody>
                         <th>
@@ -45,7 +40,6 @@ get_header(); ?>
                                 </td>
                             </tr>
                         <?php endif; ?>
-
                         <tr class="artist_season_select">
                             <td>
                                 <?php
@@ -57,11 +51,9 @@ get_header(); ?>
                                     echo $term->name;
                                     echo '</a>' . ' '; // space at the end here
                                     echo '</div>';
-                                }
-                                ?>
+                                } ?>
                             </td>
                         </tr>
-
                         <tr>
                             <td><?php echo $bio; ?></td>
                         </tr>
@@ -117,13 +109,8 @@ get_header(); ?>
                             <?php
                         }
                     } ?>
-
-
             </section>
         </article>
-
     </main><!-- .site-main -->
-
 </div><!-- .content-area -->
-
 <?php get_footer(); ?>
