@@ -18,99 +18,72 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <article class="artist-profile">
-            <section class="container">
-                <img class="artist-profile__avatar" src="<?php echo $avatar_thumbnail; ?>" alt="<?php the_title(); ?> image">
-                <table class="artist-profile__content">
-                    <tbody>
-                        <th>
-                            <h1><?php echo $name; ?></h1>
-                        </th>
 
-                        <?php if( $medium ): ?>
-                            <tr>
-                                <td><?php echo $medium; ?></td>
-                            </tr>
-                        <?php endif; ?>
+        <section>
+            <div class="artist_season_select">
+                <?php
+                $terms = get_the_terms( $post->ID, 'season' );
+                foreach( $terms as $term ) {
+                    echo '<div class="item">';
+                    $slug = $term->slug;
+                    echo "<a href='/season/$slug'>";
+                    echo $term->name;
+                    echo '</a>' . ' '; // space at the end here
+                    echo '</div>';
+                } ?>
+            </div>
+        </section>
 
-                        <?php if( $website): ?>
-                            <tr>
-                                <td>
-                                    <a href="<?php echo $website; ?>">Website</a>
-                                </td>
-                            </tr>
-                        <?php endif; ?>
-                        <tr class="artist_season_select">
-                            <td>
-                                <?php
-                                $terms = get_the_terms( $post->ID, 'season' );
-                                foreach( $terms as $term ) {
-                                    echo '<div class="item">';
-                                    $slug = $term->slug;
-                                    echo "<a href='/season/$slug'>";
-                                    echo $term->name;
-                                    echo '</a>' . ' '; // space at the end here
-                                    echo '</div>';
-                                } ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><?php echo $bio; ?></td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section>
+            <?php $prev = get_previous_post(); ?>
+            <?php $next = get_next_post(); ?>
 
-                <?php $prev = get_previous_post(); ?>
-                <?php $next = get_next_post(); ?>
+            <?php if( $next || $prev ): ?>
+                <nav class="artist-nav">
+                    <?php if( $next ): ?>
+                        <a class="half" href="<?php the_permalink( $next->ID ); ?>">
+                            <p><?php echo $next->post_title; ?></p>
+                        </a>
+                    <?php endif; ?>
+                    <?php if( $prev ): ?>
+                        <a class="half" href="<?php the_permalink( $prev->ID ); ?>/">
+                            <p><?php echo $prev->post_title; ?></p>
+                        </a>
+                    <?php endif; ?>
+                </nav>
+            <?php endif; ?>
+        </section>
 
-                <?php if( $next || $prev ): ?>
-                    <nav class="artist-nav">
-                        <?php if( $next ): ?>
-                            <a class="half" href="<?php the_permalink( $next->ID ); ?>">
-                                <div class="blog-nav__box artist-nav__prev">
-                                    <div data-icon="ei-chevron-left" data-size="m"></div> <p><?php echo $next->post_title; ?></p>
-                                </div>
-                            </a>
-                        <?php endif; ?>
-                        <?php if( $prev ): ?>
-                            <a class="half" href="<?php the_permalink( $prev->ID ); ?>/">
-                                <div class="blog-nav__box artist-nav__next">
-                                    <p><?php echo $prev->post_title; ?></p> <div data-icon="ei-chevron-right" data-size="m"></div>
-                                </div>
-                            </a>
-                        <?php endif; ?>
-                    </nav>
-                <?php endif; ?>
+        <section>
+            <div class="row">
+                <?php
+                $related_products = get_posts(array(
+                    'numberposts'	=> -1,
+                    'post_type'		=> 'product',
+                    'meta_key'		=> 'related_artist',
+                    'meta_value'	=> $post->ID
+                ));
 
-                <div class="row">
-                    <?php
-                    $related_products = get_posts(array(
-	                'numberposts'	=> -1,
-	                'post_type'		=> 'product',
-	                'meta_key'		=> 'related_artist',
-	                'meta_value'	=> $post->ID
-                    ));
+                if( !$related_products == 0 ) {
+                    foreach($related_products as $product) {
+                        $title = $product->post_title;
+                        $id    = $product->ID;
+                        $link  = get_the_permalink( $id );
+                        ?>
 
-                    if( !$related_products == 0 ) {
-                        foreach($related_products as $product) {
-                            $title = $product->post_title;
-                            $id    = $product->ID;
-                            $link  = get_the_permalink( $id );
-                            ?>
-
-                            <div class="artist-related-products">
-                                <div class="related-product">
-                                    <a href="<?php the_permalink( $id ); ?>">
-                                        <?php echo get_the_title( $id ); ?>
-                                    </a>
-                                </div>
+                        <div class="artist-related-products">
+                            <div class="related-product">
+                                <a href="<?php the_permalink( $id ); ?>">
+                                    <?php echo get_the_title( $id ); ?>
+                                </a>
                             </div>
+                        </div>
 
-                            <?php
-                        }
-                    } ?>
-            </section>
-        </article>
+                        <?php
+                    }
+                } ?>
+            </div>
+        </section>
     </main><!-- .site-main -->
-</div><!-- .content-area -->
+</div>
 <?php get_footer(); ?>
