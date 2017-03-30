@@ -1,4 +1,9 @@
 jQuery(document).ready(function($) {
+  console.log('hello');
+  $('.nav-mobile-toggle').click(function() {
+    $(this).toggleClass('nav-mobile-toggle-transition');
+    $('.nav-mobile').toggleClass('toggle');
+  });
 
   $('#front-page-slider').slick({
     arrows: true,
@@ -6,7 +11,7 @@ jQuery(document).ready(function($) {
     prevArrow: '<i class=\'material-icons slick-prev\'>chevron_left</i>',
     nextArrow: '<i class=\'material-icons slick-next\'>chevron_right</i>'
   })
-  
+
   $(window).scroll(function() {
     var scroll = $(window).scrollTop()
     if (scroll >= 96) {

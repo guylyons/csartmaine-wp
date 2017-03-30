@@ -1,7 +1,9 @@
 <?php
-// header.php
-$logo = get_field( 'logo', 8 );
-$logo = $logo['sizes']['large'];
+/**
+ * Default Header Template
+ *
+ */
+
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +36,9 @@ $logo = $logo['sizes']['large'];
     </section>
 
     <header class="header-wrap">
+        <?php
+        $logo = get_field( 'logo', 8 );
+        $logo = $logo['sizes']['large']; ?>
         <?php if( $logo ): ?>
             <section class="site-logo">
                 <a href="<?php echo home_url(); ?>">
@@ -101,7 +106,7 @@ $logo = $logo['sizes']['large'];
                 <?php csart_mobile_nav(); ?>
             </nav><!-- .nav-mobile -->
 
-            <div class="nav-mobile__toggle"></div>
+            <div class="nav-mobile-toggle"></div>
 
         </div>
     </header>

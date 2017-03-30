@@ -194,13 +194,14 @@ Header
   justify-content: space-around;
   flex-direction: column;
   ul {
+    padding: 0;
     list-style: none;
     margin: 0;
     font-size: 3em;
   }
 }
 
-.nav-mobile__toggle {
+.nav-mobile-toggle {
   @media (min-width: 769px) {
     display: none;
   }
@@ -228,7 +229,7 @@ Header
   }
 }
 
-.nav-mobile__toggle-transition {
+.nav-mobile-toggle-transition {
   &::after {
     top: 0;
     left: 0;
