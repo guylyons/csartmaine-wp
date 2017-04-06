@@ -15,6 +15,8 @@ include('includes/enqueue.php');
 include('includes/menus.php');
 /* Helper Functions */
 include('includes/helpers.php');
+/* Custom Post Types & Taxonomies */
+include('includes/cpt.php');
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
