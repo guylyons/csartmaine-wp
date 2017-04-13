@@ -45,10 +45,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
 		 */
+		remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
 	<div class="summary entry-summary">
+
+		<?php $artist = get_field( 'related_artist' ); ?>
+		<h2><a href="<?php the_permalink( $artist->ID ); ?>"><?php get_artist_name(); ?></a></h2>
 
 		<?php
 			/**
@@ -80,5 +84,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 
 </div><!-- #product-<?php the_ID(); ?> -->
+</section>
+
+<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

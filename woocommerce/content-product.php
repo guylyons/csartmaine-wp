@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php post_class(); ?>>
+<li <?php post_class('col4'); ?>>
 	<?php
 	/**
 	 * woocommerce_before_shop_loop_item hook.
@@ -51,6 +51,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_shop_loop_item_title' );
 
+	get_artist_name();
 	/**
 	 * woocommerce_after_shop_loop_item_title hook.
 	 *
