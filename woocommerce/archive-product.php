@@ -36,8 +36,8 @@ get_header( 'shop' );
                 <a href="<?php echo get_term_link( $term->term_id ); ?>"><?php echo $term->name; ?></a>
             </li>
         <?php endforeach; ?>
-    </ul>
-</aside>
+        </ul>
+    </aside>
 
 <?php
 /**

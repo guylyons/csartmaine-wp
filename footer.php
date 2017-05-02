@@ -49,7 +49,7 @@
                 <?php get_template_part( 'template-parts/quote-master' ); ?>
             </h5>
             <div style="color: #404040;">
-                © 2016 CSArt Maine, LLC.
+                © 2017 CSArt Maine, LLC.
             </div>
             <div class="pay-methods">
                 <?php echo do_shortcode( '[wc_payment_methods]' ); ?>
