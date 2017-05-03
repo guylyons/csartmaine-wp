@@ -11,7 +11,7 @@ const config = {
     filename: 'bundle.js',
   },
   devServer: {
-    compress: true,
+    compress: false,
     port: 9000
   },
   module: {
