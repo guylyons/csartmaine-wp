@@ -1,17 +1,11 @@
 <template lang="html">
-    <section class="app-test">
-        <ul>
-            {{ posts }}
-            <li>test</li>
-        </ul>
-    </section>
+    <div>
+        Hello World!
+    </div>
 </template>
 
 <script>
-export default {
-  data: function() {
-  }
-}
+
 </script>
 
 <style lang="scss" scoped>

@@ -12,6 +12,9 @@ $hero_url = '';
 if( is_blog() ) {
     $hero_banner = get_field( 'hero_banner', $index_id );
     $hero_title  = get_the_title( $index_id );
+} else if ( is_archive() ) {
+    $hero_banner = get_field( 'hero_banner', 145 );
+    $hero_title  = get_the_title( 145 );
 } else if ( is_shop() || is_product() || is_product_category()  ) {
     $hero_banner = get_field( 'hero_banner', $shop_id );
     $hero_title  = get_the_title( $shop_id );

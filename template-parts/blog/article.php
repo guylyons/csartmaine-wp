@@ -5,11 +5,4 @@
     <article class="post-article">
         <?php the_content(); ?>
     </article>
-    <section class="post-comments">
-        <?php
-        if ( comments_open() || get_comments_number() ) :
-            comments_template();
-        endif;
-        ?>
-    </section>
 </div>

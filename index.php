@@ -11,7 +11,6 @@ get_header();
 
             <section class="container index-blog">
                 <section class="row">
-
                     <?php while( have_posts() ) : the_post(); ?>
                         <?php get_template_part( 'template-parts/blog/index' ); ?>
                     <?php endwhile; ?>

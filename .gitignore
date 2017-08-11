@@ -33,9 +33,6 @@ npm-debug.log
 assets/css
 *.css.map
 
-# Compiled js
-assets/js
-
 ### Emacs ###
 *~
 \#*\#

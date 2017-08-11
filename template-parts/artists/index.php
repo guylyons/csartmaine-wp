@@ -1,11 +1,3 @@
-<div class="artist-index__opening-blurb">
-    <div class="container row">
-        <div class="row blog-container">
-            <?php the_content(); ?>
-        </div>
-    </div>
-</div>
-
 <?php
 // FIXME: make the term dynamic via ACF
 $args = array(
