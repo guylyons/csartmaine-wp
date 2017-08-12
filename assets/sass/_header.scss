@@ -18,7 +18,7 @@ Header
     background: $black;
     // background: $primary-color;
     padding: 10px 30px;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 0;
     letter-spacing: 2px;
   }
@@ -28,7 +28,7 @@ Header
   color: $white;
   background: $black;
   padding: 10px 30px;
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
   margin-bottom: 0;
   letter-spacing: 2px;
 }
@@ -65,7 +65,8 @@ Header
   position: fixed;
   bottom: 0;
   z-index: 50;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   transition: bottom 1s;
   padding: 1em 0;
   .row {
@@ -140,7 +141,8 @@ Header
 
 .logo--mobile {
   position: absolute;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
   width: 60px;
@@ -175,20 +177,24 @@ Header
 
   a {
     color: $grey;
-
   }
-  .current-menu-item, .current_page_parent {
+  .current-menu-item,
+  .current_page_parent {
     border-bottom: 2px solid $primary-color;
-    a { color: $black; }
+    a {
+      color: $black;
+    }
   }
 }
 
 .nav-mobile {
   position: fixed;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 900;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   display: none;
   align-items: center;
   justify-content: space-around;
@@ -225,7 +231,6 @@ Header
     height: 10px;
     border-radius: 50%;
     transition: all .3s;
-
   }
 }
 
@@ -254,7 +259,7 @@ Header
   left: 0;
   width: 180px !important;
   background: $white;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   text-align: left !important;
   border-bottom: 0;
   li {
@@ -276,7 +281,7 @@ Header
   position: fixed !important;
   background: $black;
   // background: #fff;
-  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   z-index: 80;
   height: 10px;
   width: 100%;
@@ -300,7 +305,10 @@ Header
     padding-left: 1em;
     font-size: 1.3em;
   }
-  .current-menu-item a, .current_page_parent a {color: $white;}
+  .current-menu-item a,
+  .current_page_parent a {
+    color: $white;
+  }
   .sub-menu {
     left: initial !important;
     right: 0;
@@ -328,7 +336,8 @@ Header
   justify-content: space-around;
   display: none;
   top: 100px;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
   @media (max-width: 768px) {
     display: none !important;
@@ -352,4 +361,6 @@ Header
 .artists-dropdown--toggle {
   display: flex;
 }
-.active { border-bottom: 2px solid $secondary-color !important; }
+.active {
+  border-bottom: 2px solid $secondary-color !important;
+}

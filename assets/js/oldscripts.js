@@ -5,8 +5,11 @@ jQuery(document).ready(function($) {
   });
 
   $("#front-page-slider").slick({
+    lazyLoad: "ondemand",
     arrows: true,
     dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     prevArrow: "<i class='material-icons slick-prev'>chevron_left</i>",
     nextArrow: "<i class='material-icons slick-next'>chevron_right</i>"
   });

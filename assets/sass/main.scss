@@ -7,7 +7,9 @@
 /*=====================================
 Global 👻
 =====================================*/
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 a {
   color: $black;
@@ -16,17 +18,17 @@ a {
 }
 
 body {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .panel {
-  background: #FFF;
+  background: #fff;
   padding: 1em;
-  border: 1px solid #DDD;
+  border: 1px solid #ddd;
   font-size: 1.2em;
   line-height: 1.4;
   margin: 1em 0;
-  box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 /*=====================================
@@ -37,12 +39,19 @@ Newsletter
   align-items: center;
   justify-content: center;
   height: 300px;
-  background: #EEE;
+  background: #eee;
   /* Rectangle: */
-  background-image: linear-gradient(-51deg, #DE86C2 0%, #82ACFF 100%);
+  background-image: linear-gradient(-51deg, #de86c2 0%, #82acff 100%);
   background-size: cover;
   color: $white;
-  h1,h2,h3,h4,h5,h6 { color: $white; }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
   // background-image: url("/wp-content/themes/csartmaine/assets/images/pat.png");
   // background-size: 50px auto;
   .newsletter-form-wrap {
@@ -57,7 +66,7 @@ Newsletter
     // background-image: linear-gradient(-90deg, #E149F2 12%, #FF1818 87%);
     // @include cool_gradient;
     background: $white;
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.38);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.38);
     border-radius: 50%;
     width: 70px;
     height: 70px;
@@ -70,12 +79,12 @@ Newsletter
     text-transform: uppercase;
     margin: 0;
     &:hover {
-      box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.45);
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.45);
       background: $black;
       color: $white;
     }
     &:active {
-      box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.0);
+      box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.0);
     }
   }
   .email {
@@ -91,7 +100,7 @@ Newsletter
     margin-right: 11px;
   }
   .email-error {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.3);
     color: $black;
     font-weight: bold;
     padding: 20px 10px;
@@ -132,18 +141,20 @@ Section 1: Front Page Slider
   .slider-content {
     padding: 2em;
     flex-direction: column;
-    position: absolute;
+    // position: absolute;
     background: $white;
     @media (min-width: 769px) {
       bottom: 2em;
       right: 6em;
       max-width: 600px;
-      box-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+      // box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
     }
     @media (max-width: 768px) {
       position: absolute;
-      top: 0; bottom: 0;
-      left: 0; right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       width: 100%;
       height: 100%;
       display: flex;
@@ -158,6 +169,7 @@ Section 1: Front Page Slider
     }
   }
   .slider-item {
+    // background-color: $secondary-color;
     position: relative;
     background-size: cover;
     background-position: center center;
@@ -177,10 +189,10 @@ Section 1: Front Page Slider
     opacity: 0.2;
     transition: opacity .5s;
     color: $black;
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, .1);
     padding: 20px 15px;
     &:hover {
-      background: rgba(255,255,255,.6);
+      background: rgba(255, 255, 255, .6);
       cursor: pointer;
     }
   }
@@ -201,11 +213,15 @@ Section 1: Front Page Slider
       cursor: pointer;
     }
   }
-  &:hover > .slick-arrow, &:hover .slick-dots {
+  &:hover > .slick-arrow,
+  &:hover .slick-dots {
     opacity: 1;
   }
   @media (max-width: 768px) {
-    .slick-arrow, .slick-dots { display: none !important; }
+    .slick-arrow,
+    .slick-dots {
+      display: none !important;
+    }
   }
 }
 
@@ -232,7 +248,9 @@ Section 1: Front Page Slider
     content: "";
     background: $black;
   }
-  button { display: none; }
+  button {
+    display: none;
+  }
 }
 
 .shop-feature {
@@ -258,7 +276,8 @@ Section 2
 .section-2 {
   padding-left: 1em;
 }
-.about, .about-image {
+.about,
+.about-image {
   height: 450px;
 }
 
@@ -296,7 +315,7 @@ Section 2
     top: 40px;
     border-top: 24px solid transparent;
     border-bottom: 24px solid transparent;
-    border-left: 24px solid #fff
+    border-left: 24px solid #fff;
   }
 }
 
@@ -306,11 +325,15 @@ Section 2
   @media (max-width: 768px) {
     display: none;
   }
-  a { color: $primary-color; }
+  a {
+    color: $primary-color;
+  }
   .title {
     text-align: center;
   }
-  ul { @include plain-list; }
+  ul {
+    @include plain-list;
+  }
   li {
     padding: 1em;
     margin-bottom: 25px;
@@ -338,36 +361,35 @@ Section 3
 }
 
 .image-doubler--outer {
-    position: relative;
-    background-size: 70%;
-    background-position: 200% -70%;
-    height: 100%;
-    width: 100%;
-    @media (min-width: 769px) {
-        lost-column: 1/2;
+  position: relative;
+  background-size: 70%;
+  background-position: 200% -70%;
+  height: 100%;
+  width: 100%;
+  @media (min-width: 769px) {
+    lost-column: 1/2;
+  }
+  .image-doubler--inner {
+    text-align: center;
+    padding: 4em 0;
+    img {
+      border: 10px solid $white;
+      width: 70%;
     }
-    .image-doubler--inner {
-        text-align: center;
-        padding: 4em 0;
-        img {
-            border: 10px solid $white;
-            width: 70%;
-        }
-    }
+  }
 }
 
 .image-doubler--content {
-    @media (min-width: 769px) {
-        lost-column: 2/4;
-    }
-    padding-bottom: 2em;
-    .artist-name {
-        padding: 5px 0;
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
+  @media (min-width: 769px) {
+    lost-column: 2/4;
+  }
+  padding-bottom: 2em;
+  .artist-name {
+    padding: 5px 0;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
 }
-
 
 /*=====================================
 Section 4
@@ -437,7 +459,7 @@ aside {
         color: $white;
         background-size: cover;
         background-position: center center;
-        text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
         border-bottom: 2px solid transparent;
         z-index: 600;
         &:hover {
@@ -451,9 +473,11 @@ aside {
   }
   .overlay {
     position: absolute;
-    top: 0; bottom: 0;
-    right: 0; left: 0;
-    background-color: rgba(0,0,0,0.35);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.35);
     z-index: -1;
   }
   .index-item:nth-child(1n) {
@@ -505,7 +529,9 @@ Post Single
   height: 100px;
   .post-author-avatar {
     width: 100%;
-    img { border-radius: 50%; }
+    img {
+      border-radius: 50%;
+    }
   }
   .facebook-share {
     width: 106px;
@@ -544,7 +570,10 @@ Post Single
   left: 2em;
   bottom: -6em;
   padding: 3em 0;
-  * { color: $white; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+  * {
+    color: $white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
   .post-meta {
     margin-bottom: 1em;
   }
@@ -595,10 +624,14 @@ hr {
   @media (max-width: 800px) {
     height: 300px;
   }
-  h1 { font-size: 3em; }
+  h1 {
+    font-size: 3em;
+  }
 }
 
-.page .hero-image { margin-bottom: 2em;}
+.page .hero-image {
+  margin-bottom: 2em;
+}
 
 .page-id-145 .hero-image {
   margin-bottom: 0;
@@ -611,15 +644,19 @@ Artist Index
 .artist-application {
   display: none !important;
   position: fixed;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   overflow: scroll;
   z-index: 9999;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   color: $white;
   .artist-application__inner {
     lost-center: 500px;
-    th { color: $white; }
+    th {
+      color: $white;
+    }
   }
 }
 
@@ -684,12 +721,13 @@ Artist Index
       position: absolute;
       bottom: 0;
       top: 0;
-      left: 0; right: 0;
+      left: 0;
+      right: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: rgba(0,0,0,.8);
+      background: rgba(0, 0, 0, .8);
       opacity: 0;
       transition: opacity ease-in .2s;
       .aritst-name {
@@ -711,7 +749,7 @@ Artist Index
       color: $white;
       word-spacing: 9000px;
       padding: .5em;
-      text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -747,10 +785,12 @@ Artist Index
   }
   .artist_season_select {
     .item {
-      border: 1px solid #FFF;
+      border: 1px solid #fff;
       &:hover {
         background: $white;
-        > a { color: $black; }
+        > a {
+          color: $black;
+        }
       }
       a {
         text-decoration: none;
@@ -760,9 +800,11 @@ Artist Index
 }
 
 .artist-nav {
-  .artist-nav__prev, .artist-nav__next {
+  .artist-nav__prev,
+  .artist-nav__next {
     position: absolute;
-    top: 0; bottom: 0;
+    top: 0;
+    bottom: 0;
     background: #222;
     display: flex;
     align-items: center;
@@ -776,7 +818,9 @@ Artist Index
     position: inherit;
   }
   .artist-nav__prev {
-    .icon { left: 0; }
+    .icon {
+      left: 0;
+    }
     left: 0;
     p {
       position: inherit;
@@ -788,7 +832,9 @@ Artist Index
     }
   }
   .artist-nav__next {
-    .icon { right: 0; }
+    .icon {
+      right: 0;
+    }
     right: 0;
     p {
       position: inherit;
@@ -806,12 +852,15 @@ Artist Index
   margin: 0 !important;
   padding: 0 !important;
 }
-.wdi_media_info { display: none !important; }
+.wdi_media_info {
+  display: none !important;
+}
 .wdi_header_user_text {
   text-align: center;
   display: none !important;
 }
-.wdi_load_more_wrap, .wdi_spinner_wrap {
+.wdi_load_more_wrap,
+.wdi_spinner_wrap {
   border: 0 !important;
 }
 .wdi_load_more_text {
@@ -823,10 +872,12 @@ Ninja Forms
 =====================================*/
 
 .ninja-forms-cont {
-  .ninja-forms-required-items, .ninja-forms-req-symbol {
+  .ninja-forms-required-items,
+  .ninja-forms-req-symbol {
     display: none;
   }
-  input, textarea {
+  input,
+  textarea {
     border: 1px solid #979797;
     border-radius: 6px;
     color: #747474;
@@ -834,7 +885,8 @@ Ninja Forms
     margin: 0;
     padding: 8px;
   }
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     outline: none;
     background: #f6f6f6;
   }
@@ -859,7 +911,9 @@ Ninja Forms
     padding: 2em 0;
     text-align: center;
     background: $light-grey;
-    h1 { margin: 0; }
+    h1 {
+      margin: 0;
+    }
   }
 }
 
@@ -915,7 +969,7 @@ Reminder
 }
 
 .box-shadow {
-  box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
   margin: 1em;
   padding: 2em;
   background-color: $light-grey;
