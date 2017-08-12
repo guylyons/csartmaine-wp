@@ -7,14 +7,9 @@
 get_header(); ?>
 
 <div class="content-wrap page-content" role="main">
-
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        
-        <?php get_template_part( 'template-parts/hero' ); ?>
-        <?php get_template_part( 'template-parts/artists/index' ); ?>
-        
-        <?php endwhile; ?>
-    <?php endif; ?>
+    
+    <?php get_template_part( 'template-parts/hero' ); ?>
+    <?php get_template_part( 'template-parts/artists/index' ); ?>
 
 </div><!-- .content-wrap -->
 

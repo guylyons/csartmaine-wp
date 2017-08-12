@@ -19,9 +19,11 @@ $artist_query = new WP_Query( $args );
             <?php get_template_part( 'template-parts/artists/season-select' ); ?>
             <h2>Season: S4</h2>
             <div class="artist-index">
-                <?php while( $artist_query->have_posts() ) : $artist_query->the_post(); ?>
-                    <?php get_template_part( 'template-parts/artists/content' ); ?>
-                <?php endwhile; ?>
+                <?php if( have_posts() ) : ?>
+                    <?php while( have_posts() ) : the_post(); ?>
+                        <?php get_template_part( 'template-parts/artists/content' ); ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>

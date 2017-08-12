@@ -2,6 +2,16 @@
 get_header();
 ?>
 
+<?php
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$args = array(
+  'posts_per_page' => 6,
+  'paged'          => $paged
+);
+
+$the_query = new WP_Query( $args ); 
+?>
+
 <?php if( have_posts() ) : ?>
     <section class="content-area" id="content-area">
 
@@ -11,7 +21,7 @@ get_header();
 
             <section class="container index-blog">
                 <section class="row">
-                    <?php while( have_posts() ) : the_post(); ?>
+                    <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
                         <?php get_template_part( 'template-parts/blog/index' ); ?>
                     <?php endwhile; ?>
 
@@ -20,7 +30,11 @@ get_header();
 
         </main>
     </section>
+    <div class="pagination">
+        <?php the_posts_pagination( $args ); ?> 
+    </div>
 <?php endif; ?>
+
 
 <?php get_template_part( 'template-parts/recent', 'products' ); ?>
 <?php get_template_part( 'template-parts/newsletter-signup' ); ?>
