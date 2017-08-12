@@ -4,12 +4,6 @@
  *
  */
 ?>
-<style media="screen">
-    .full-width {
-        width: 100%;
-        height: auto;
-    }
-</style>
 <section class="slider row section-1" id="front-page-slider">
    <?php $landing_slider = get_field( 'landing_slider' ); ?>
    <?php if( $landing_slider ): ?>

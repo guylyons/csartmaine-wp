@@ -46,11 +46,9 @@
                 </a>
             </section>
         <?php endif; ?>
-        <div class="container">
-            <nav class="nav-primary">
-                <?php csart_primary_nav(); ?>
-            </nav><!-- .nav-primary -->
-        </div>
+        <nav class="nav-primary">
+            <?php csart_primary_nav(); ?>
+        </nav><!-- .nav-primary -->
             <section id="artists-dropdown" class="artists-dropdown">
                 <div class="artist-dropdown__season">
                 </div>

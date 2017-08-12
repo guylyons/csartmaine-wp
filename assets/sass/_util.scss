@@ -8,6 +8,11 @@
   // height: 500px;
 }
 
+.full-width {
+  width: 100%;
+  height: auto;
+}
+
 .col2 {
   lost-column: 1/2;
 }
@@ -42,7 +47,8 @@
   lost-column: 1/12;
 }
 
-.row, .products {
+.row,
+.products {
   lost-utility: clearfix;
   margin-bottom: 20px;
 }
