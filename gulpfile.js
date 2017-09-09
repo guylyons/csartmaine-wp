@@ -33,7 +33,7 @@ gulp.task("serve", ["browser-sync", "watch"]);
 gulp.task("browser-sync", function() {
   var files = ["**/*.php", "assets/css/**/*.css", "assets/imgs/**/*"];
   browserSync.init(files, {
-    proxy: "csartmaine.dev:8888",
+    proxy: "localhost:8000",
     notify: false
   });
 });

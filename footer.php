@@ -51,7 +51,10 @@
             <div style="color: #404040;">
                 © 2017 CSArt Maine, LLC.
             </div>
+        </section>
+        <section>
             <div class="pay-methods">
+                <p>Payments secured by</p>
                 <?php echo do_shortcode( '[wc_payment_methods]' ); ?>
             </div>
         </section>

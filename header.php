@@ -20,15 +20,6 @@
 </nav>
 
 <body <?php body_class() ?>>
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
     <section class="special-event" style="display: none;">
         <div class="row">
             <div>There's something exciting happening! <a href="#">find out more</a>.</div>
@@ -49,48 +40,6 @@
         <nav class="nav-primary">
             <?php csart_primary_nav(); ?>
         </nav><!-- .nav-primary -->
-            <section id="artists-dropdown" class="artists-dropdown">
-                <div class="artist-dropdown__season">
-                </div>
-                <?php
-                $args = array(
-                    'post_type'  =>  'artists',
-                    'tax_query'  =>  array(
-                        array(
-                            'taxonomy'    =>    'season',
-                            'field'       =>    'slug',
-                            'terms'       =>    'S4'
-                        ),
-                    )
-                );
-
-                $artists = get_posts( $args );
-                $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-                foreach( $artists as $artist ) : ?>
-                <?php
-                $artist_link = get_the_permalink( $artist->ID );
-                if( $actual_link == $artist_link ) {
-                    $active_result = "active";
-                } else {
-                    $active_result = "";
-                }
-                ?>
-                    <a class="item" href="<?php the_permalink( $artist->ID ); ?>">
-                        <span class="artist-name <?php echo $active_result; ?>">
-                            <?php echo $artist->post_title; ?>
-                        </span>
-                    </a>
-                <?php endforeach; ?>
-                <?php if( !is_page( 'artists' )): ?>
-                    <a class="item" href="/artists">
-                        <span class="artists-index">
-                            More...
-                        </span>
-                    </a>
-                <?php endif; ?>
-            </section>
-
             <nav class="nav-primary-scroll">
                 <a href="#top">
                     <div class="site-title">
