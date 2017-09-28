@@ -1,8 +1,8 @@
 <?php
 
 /*=====================================
-    Image Crop Sizes
-=====================================*/
+   Image Crop Sizes
+   =====================================*/
 add_image_size( 'product_thumb', 500, 500, true );
 add_image_size( 'landing_posts', 800, 600, true );
 add_image_size( 'index_blog', 600, 180, true );
@@ -20,7 +20,7 @@ include('includes/cpt.php');
 
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
+  add_theme_support( 'woocommerce' );
 }
 
 add_theme_support( 'woocommerce' );
