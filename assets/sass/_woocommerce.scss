@@ -36,7 +36,9 @@ WooCommerce
     padding: 5px 20px;
   }
 }
-.sku_wrapper { display: none; }
+.sku_wrapper {
+  display: none;
+}
 .woocommerce-variation-availability {
   border: 1px dotted $secondary-color;
   color: $secondary-color;
@@ -45,7 +47,9 @@ WooCommerce
   padding: 1px 10px;
   margin-bottom: 10px;
   font-size: 10px;
-  p { margin: 0; }
+  p {
+    margin: 0;
+  }
 }
 .woocommerce-ordering {
   padding: 1em 0;
@@ -55,8 +59,11 @@ WooCommerce
     background: $light-grey;
   }
 }
-.woocommerce-result-count { display: none; }
-.woocommerce-ordering .orderby, .variations .value select {
+.woocommerce-result-count {
+  display: none;
+}
+.woocommerce-ordering .orderby,
+.variations .value select {
   background: $white;
   color: $secondary-color;
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
@@ -82,8 +89,12 @@ Product Index
 =====================================*/
 .price {
   color: $grey;
-  ins { text-decoration: none !important; }
-  del { color: lighten($grey, 35%); }
+  ins {
+    text-decoration: none !important;
+  }
+  del {
+    color: lighten($grey, 35%);
+  }
 }
 .products {
   padding: 0;
@@ -149,24 +160,23 @@ Product Single
     }
   }
   .images {
-    overflow-y: scroll;
-    height: 450px;
-    lost-column: 1/2;
-    position: relative;
-
-    &::-webkit-scrollbar-track
-    {
-      background-color: #F5F5F5;
+    @media (min-width: 540px) {
+      overflow-y: scroll;
+      height: 450px;
+      lost-column: 1/2;
+      position: relative;
     }
 
-    &::-webkit-scrollbar
-    {
+    &::-webkit-scrollbar-track {
+      background-color: #f5f5f5;
+    }
+
+    &::-webkit-scrollbar {
       width: 8px;
       background-color: $primary-color;
     }
 
-    &::-webkit-scrollbar-thumb
-    {
+    &::-webkit-scrollbar-thumb {
       background-color: $primary-color;
     }
     img {
@@ -176,11 +186,12 @@ Product Single
       float: left;
     }
   }
-  .summary {
-    lost-column: 1/2;
+  @media (min-width: 540px) {
+    .summary {
+      lost-column: 1/2;
+    }
   }
   .product {
-
   }
 }
 
@@ -200,7 +211,8 @@ WooCommerce Menu Cart Plugin
 }
 
 .woocommerce-billing-fields {
-  input, select {
+  input,
+  select {
     border: 1px solid $grey;
     width: 100%;
     height: 40px !important;
@@ -218,7 +230,8 @@ WooCommerce Menu Cart Plugin
   }
 }
 
-.order-bottom, .cart-collaterals {
+.order-bottom,
+.cart-collaterals {
   border: 1px solid $grey;
   padding: 3em;
 }
@@ -228,7 +241,9 @@ WooCommerce Menu Cart Plugin
     width: initial;
     display: flex;
     align-items: center;
-    label { padding: 0; }
+    label {
+      padding: 0;
+    }
   }
   .checkbox {
     display: inline-block;
@@ -240,7 +255,8 @@ WooCommerce Menu Cart Plugin
 Variations
 ==========================================*/
 .variations {
-  .label, .label label {
+  .label,
+  .label label {
     padding: 0;
     background: $black;
     color: $white;
@@ -269,7 +285,8 @@ Variations
   #container {
     lost-column: 10/12;
   }
-  .woocommerce-breadcrumb, .woocommerce-ordering {
+  .woocommerce-breadcrumb,
+  .woocommerce-ordering {
     width: 50%;
     float: left;
   }
@@ -277,5 +294,5 @@ Variations
 
 .woocommerce-tabs,
 .wc-tabs-wrapper {
-    display: none;
+  display: none;
 }
