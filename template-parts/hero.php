@@ -12,7 +12,7 @@ $hero_url = '';
 if( is_blog() ) {
     $hero_banner = get_field( 'hero_banner', $index_id );
     $hero_title  = get_the_title( $index_id );
-} else if ( is_archive() ) {
+} else if ( is_archive() && !is_shop() ) {
     $hero_banner = get_field( 'hero_banner', 145 );
     $hero_title  = get_the_title( 145 );
 } else if ( is_shop() || is_product() || is_product_category()  ) {

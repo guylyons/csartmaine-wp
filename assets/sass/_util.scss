@@ -100,13 +100,14 @@
 }
 
 .button {
-  border: 1px solid $black;
+  border: 1px solid $primary-color;
   padding: 10px 15px;
   font-family: $avenir;
   background: none;
-  color: $black;
+  color: $primary-color;
+  // display: block;
   &:hover {
-    background: $black;
+    background: $primary-color;
     color: $white;
   }
 }

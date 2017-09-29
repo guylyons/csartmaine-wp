@@ -25,19 +25,20 @@ get_header( 'shop' );
 
 <?php get_template_part( 'template-parts/hero' ); ?>
 
-<section class="container shop-wrap">
-    <aside>
-        <ul>
-            <?php
-            $categories = get_categories( array( 'taxonomy' => 'product_cat' ) );
-            foreach($categories as $cat): ?>
+<nav class="nav nav-categories">
+    <ul>
+        <?php
+        $categories = get_categories( array( 'taxonomy' => 'product_cat' ) );
+        foreach($categories as $cat): ?>
             <?php $term = get_term( $cat->term_id ); ?>
             <li>
                 <a href="<?php echo get_term_link( $term->term_id ); ?>"><?php echo $term->name; ?></a>
             </li>
         <?php endforeach; ?>
-        </ul>
-    </aside>
+    </ul>
+</nav>
+
+<section class="container shop-wrap">
 
 <?php
 /**
