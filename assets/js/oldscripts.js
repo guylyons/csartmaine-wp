@@ -14,6 +14,10 @@ jQuery(document).ready(function($) {
     nextArrow: "<i class='material-icons slick-next'>chevron_right</i>"
   });
 
+  // $(".mobile-slider").slick({
+  //   arrows: false
+  // });
+
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
     if (scroll >= 96) {

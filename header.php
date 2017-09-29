@@ -20,6 +20,9 @@
 </nav>
 
 <body <?php body_class() ?>>
+    
+    <div class="nav-mobile-toggle"></div>
+    
     <section class="special-event" style="display: none;">
         <div class="row">
             <div>There's something exciting happening! <a href="#">find out more</a>.</div>
@@ -52,8 +55,5 @@
             <nav class="nav-mobile">
                 <?php csart_mobile_nav(); ?>
             </nav><!-- .nav-mobile -->
-
-            <div class="nav-mobile-toggle"></div>
-
         </div>
     </header>

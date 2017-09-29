@@ -77,21 +77,35 @@ Header
     text-decoration: underline;
   }
 }
-.logo {
-  position: absolute;
-  left: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  top: 10px;
-  width: 80px;
-  height: 80px;
+.site-logo {
   text-align: center;
-  border: none;
-  z-index: 50;
-  opacity: .5;
+  @media (max-width: 540px) {
+    background: $primary-color;
+    padding-top: 8px;
+  }
+}
+.logo {
+  // display: none;
+  background: #fff;
+  border-radius: 50px;
+  width: 80px;
+  @media (min-width: 540px) {
+    display: block;
+    position: absolute;
+    left: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 10px;
+    text-align: center;
+    border: none;
+    z-index: 50;
+    opacity: 0.5;
+    height: 80px;
+    width: 80px;
+  }
   &:hover {
     border-radius: 50%;
-    background-image: url('../images/gif.gif');
+    background-image: url("../images/gif.gif");
     border: none;
     opacity: 1;
   }
@@ -152,7 +166,7 @@ Header
 .nav-primary {
   display: flex;
   align-items: center;
-  transition: top ease .3s;
+  transition: top ease 0.3s;
   height: 100px;
   @media (max-width: 768px) {
     display: none;
@@ -188,6 +202,8 @@ Header
 }
 
 .nav-mobile {
+  transition: all 0.3s;
+  border: 2px solid $primary-color;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -197,13 +213,16 @@ Header
   background: rgba(255, 255, 255, 0.8);
   display: none;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   ul {
     padding: 0;
     list-style: none;
     margin: 0;
-    font-size: 3em;
+    a {
+      font-size: 3em;
+      font-weight: bold;
+    }
   }
 }
 
@@ -214,8 +233,10 @@ Header
   width: 40px;
   height: 40px;
   position: fixed;
-  top: 40px;
-  right: 40px;
+  bottom: 10px;
+  left: 0;
+  margin: 0 auto;
+  right: 0;
   z-index: 9999;
   border-radius: 50%;
   &:hover {
@@ -230,20 +251,56 @@ Header
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    transition: all .3s;
+    transition: all 0.3s;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+  }
+}
+
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
 .nav-mobile-toggle-transition {
   &::after {
-    top: 0;
-    left: 0;
+    top: 7px;
+    left: 7px;
     background: $primary-color;
     border-radius: 0;
     transform: rotate(45deg);
     background: $primary-color;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 }
 
