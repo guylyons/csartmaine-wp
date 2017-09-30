@@ -9,6 +9,8 @@
 get_header();
 ?>
 
+<div id="app"></div>
+
 <main role="main" class="main">
     
     <?php get_template_part( 'template-parts/slider' ); ?>
@@ -19,10 +21,8 @@ get_header();
         </div>
     </section>
 
-    <?php get_template_part( 'template-parts/recent-products' ); ?>
-
     <?php get_template_part( 'template-parts/meet-the-artist' ); ?>
-
+    <?php get_template_part( 'template-parts/recent-products' ); ?>
     <?php get_template_part( 'template-parts/newsletter-signup' ); ?>
 
     </section><!-- end container -->
