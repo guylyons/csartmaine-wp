@@ -6,6 +6,9 @@ Footer
   background: $white;
   border-top: 1px solid $light-grey;
   .footer-nav {
+    @media (max-width: 540px) {
+      display: none;
+    }
     padding: 3em 0;
     @media (min-width: 768px) {
       section:first-of-type {
@@ -15,15 +18,6 @@ Footer
         lost-column: 2/12;
       }
     }
-
-    // @media (max-width: 767px) {
-    //   section:first-of-type {
-    //     lost-column: 12/12;
-    //   }
-    //   section {
-    //     lost-column: 4/12;
-    //   }
-    // }
     ul {
       list-style: none;
       margin: 0;

@@ -80,13 +80,14 @@ Header
 .site-logo {
   text-align: center;
   @media (max-width: 540px) {
-    background: $secondary-color;
+    background: $primary-color;
     padding-top: 8px;
   }
 }
 .logo {
   // display: none;
   background: #fff;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
   border-radius: 50px;
   width: 80px;
   @media (min-width: 540px) {
