@@ -1,9 +1,4 @@
 jQuery(document).ready(function($) {
-  $(".nav-mobile-toggle").click(function() {
-    $(this).toggleClass("nav-mobile-toggle-transition");
-    $(".nav-mobile").toggleClass("toggle");
-  });
-
   $("#front-page-slider").slick({
     lazyLoad: "ondemand",
     arrows: true,
@@ -14,9 +9,15 @@ jQuery(document).ready(function($) {
     nextArrow: "<i class='material-icons slick-next'>chevron_right</i>"
   });
 
-  // $(".mobile-slider").slick({
-  //   arrows: false
-  // });
+  // timeout to fadein the slider
+  setTimeout(function() {
+    $(".slider-content").addClass("slider-content--visible");    
+  }, 300);
+
+  $(".nav-mobile-toggle").click(function() {
+    $(this).toggleClass("nav-mobile-toggle-transition");
+    $(".nav-mobile").toggleClass("toggle");
+  });
 
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();

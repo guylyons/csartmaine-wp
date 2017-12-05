@@ -96,3 +96,12 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+
+.slider-content {
+  transition: all 1s;
+  opacity: 0;
+}
+
+.slider-content--visible {
+  opacity: 1;
+}

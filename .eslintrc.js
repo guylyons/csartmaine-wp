@@ -8,6 +8,7 @@ module.exports = {
     ecmaVersion: 6,
     sourceType: "module"
   },
+  plugins: ["editorconfig"],
   extends: "eslint:recommended",
   rules: {
     indent: ["error", 2],

@@ -10,11 +10,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.16.2",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
     "browser-sync": "^2.18.13",
-    "css-loader": "^0.28.7",
+    "bulma": "^0.6.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cssnano": "^2.1.2",
@@ -23,9 +20,6 @@
     "gulp-sourcemaps": "^2.6.1",
     "lost": "^8.2.0",
     "next": "^3.2.2",
-    "node-sass": "^4.5.3",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "sass-loader": "^6.0.6"
+    "node-sass": "^4.7.2"
   }
 }

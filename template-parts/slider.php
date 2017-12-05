@@ -1,6 +1,6 @@
 <?php
 /**
- * Slider
+ * Slick Carousel
  *
  */
 ?>
@@ -17,7 +17,7 @@
            ?>
            <section class="slider-item">
                <div class="half">
-                   <img data-lazy="<?php echo $landing_slider_url; ?>" 
+                   <img data-lazy="<?php echo $landing_slider_url; ?>"
                         alt="<?php echo $landing_slider_hero["alt"]; ?>" class="full-width">
                </div>
                <article class="slider-content half">
