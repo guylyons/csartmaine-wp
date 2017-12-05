@@ -307,13 +307,15 @@ Variations
   text-align: center;
   background-color: #000;
   ul {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     li {
       display: flex;
       flex-grow: 1;
       &:hover {
-        background-color: $secondary-color;
+        background-color: $primary-color;
         cursor: pointer;
       }
       a {
