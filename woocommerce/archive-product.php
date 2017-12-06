@@ -143,6 +143,6 @@ do_action( 'woocommerce_after_main_content' );
 
 </section>
 
-<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
+
 
 <?php get_footer( 'shop' ); ?>

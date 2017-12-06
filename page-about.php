@@ -16,7 +16,7 @@ get_header(); ?>
         </div>
 
         <?php get_template_part( 'template-parts/recent-products' ); ?>
-        
+
         <?php if( have_rows( 'team' )): ?>
             <section class="team">
                 <h1>Our Team</h1>
@@ -40,6 +40,6 @@ get_header(); ?>
 
 </div><!-- end content -->
 
-<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
+
 
 <?php get_footer(); ?>

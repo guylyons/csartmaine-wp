@@ -21,7 +21,6 @@ get_header();
 
     <?php get_template_part( 'template-parts/meet-the-artist' ); ?>
     <?php get_template_part( 'template-parts/recent-products' ); ?>
-
 </main>
 
 <?php get_footer(); ?>

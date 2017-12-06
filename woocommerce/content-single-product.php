@@ -86,6 +86,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div><!-- #product-<?php the_ID(); ?> -->
 </section>
 
-<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
+
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

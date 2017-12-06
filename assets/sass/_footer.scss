@@ -4,7 +4,6 @@ Footer
 .footer-wrap {
   height: 200px;
   background: $white;
-  border-top: 1px solid $light-grey;
   .footer-nav {
     @media (max-width: 540px) {
       display: none;
@@ -41,9 +40,6 @@ Footer
       padding-right: 4px;
     }
   }
-  .copyright {
-    text-align: right;
-  }
   .footer__callout {
     lost-utility: clearfix;
     background: $black;
@@ -57,7 +53,7 @@ Footer
     .pay-methods {
       p {
         margin-top: 10px;
-        margin-bottom: -12px;
+        // margin-bottom: -12px;
       }
       // position: absolute;
       // right: 1em;

@@ -9,7 +9,7 @@ $args = array(
   'paged'          => $paged
 );
 
-$the_query = new WP_Query( $args ); 
+$the_query = new WP_Query( $args );
 ?>
 
 <?php if( have_posts() ) : ?>
@@ -31,12 +31,12 @@ $the_query = new WP_Query( $args );
         </main>
     </section>
     <div class="pagination">
-        <?php the_posts_pagination( $args ); ?> 
+        <?php the_posts_pagination( $args ); ?>
     </div>
 <?php endif; ?>
 
 
 <?php get_template_part( 'template-parts/recent', 'products' ); ?>
-<?php get_template_part( 'template-parts/newsletter-signup' ); ?>
+
 
 <?php get_footer(); ?>

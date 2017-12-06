@@ -3,6 +3,9 @@ jQuery(document).ready(function($) {
     lazyLoad: "ondemand",
     arrows: true,
     dots: true,
+    fade: true,
+    speed: 300,
+    cssEase: 'linear',
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: "<i class='material-icons slick-prev'>chevron_left</i>",
@@ -11,7 +14,7 @@ jQuery(document).ready(function($) {
 
   // timeout to fadein the slider
   setTimeout(function() {
-    $(".slider-content").addClass("slider-content--visible");    
+    $(".slider-content").addClass("slider-content--visible");
   }, 300);
 
   $(".nav-mobile-toggle").click(function() {

@@ -44,17 +44,9 @@
         </nav>
     </div>
     <section class="footer__callout">
-        <section class="container">
-            <h5 class="title">
-                <?php get_template_part( 'template-parts/quote-master' ); ?>
-            </h5>
-            <div style="color: #404040;">
-                © 2017 CSArt Maine, LLC.
-            </div>
-        </section>
         <section>
             <div class="pay-methods">
-                <p>Payments secured by</p>
+                <p style="color: #fff;">© 2018 CSArt Maine, LLC.</p>
                 <?php echo do_shortcode( '[wc_payment_methods]' ); ?>
             </div>
         </section>
