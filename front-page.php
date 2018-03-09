@@ -15,27 +15,21 @@ get_header();
         <div class="grid">
             <div class="item">
                 <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam quisquam, reiciendis officiis dolorem architecto ab minus odit. Quaerat dolorum, consequatur inventore est minima culpa rerum accusamus reiciendis perferendis iste!</p>
             </div>
             <div class="item">
                 <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam quisquam, reiciendis officiis dolorem architecto ab minus odit. Quaerat dolorum, consequatur inventore est minima culpa rerum accusamus reiciendis perferendis iste!</p>
             </div>
             <div class="item">
                 <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam quisquam, reiciendis officiis dolorem architecto ab minus odit. Quaerat dolorum, consequatur inventore est minima culpa rerum accusamus reiciendis perferendis iste!</p>
             </div>
              <div class="item">
                 <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam quisquam, reiciendis officiis dolorem architecto ab minus odit. Quaerat dolorum, consequatur inventore est minima culpa rerum accusamus reiciendis perferendis iste!</p>
             </div>
             <div class="item">
                 <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam quisquam, reiciendis officiis dolorem architecto ab minus odit. Quaerat dolorum, consequatur inventore est minima culpa rerum accusamus reiciendis perferendis iste!</p>
             </div>
             <div class="item">
                 <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam quisquam, reiciendis officiis dolorem architecto ab minus odit. Quaerat dolorum, consequatur inventore est minima culpa rerum accusamus reiciendis perferendis iste!</p>
             </div>
         </div>
     </section>
