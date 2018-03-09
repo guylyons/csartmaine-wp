@@ -80,7 +80,7 @@ Header
 .site-logo {
   text-align: center;
   @media (max-width: 540px) {
-    background: $secondary-color;
+    background: $primary-color;
     padding-top: 8px;
   }
 }
@@ -256,8 +256,6 @@ Header
     -webkit-animation: spin 4s linear infinite;
     -moz-animation: spin 4s linear infinite;
     animation: spin 4s linear infinite;
-    box-shadow: 5px 5px 0 rgba(0,0,0,0.3);
-
   }
 }
 
