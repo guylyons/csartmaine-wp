@@ -212,8 +212,9 @@ WooCommerce Menu Cart Plugin
 
 .wpmenucartli {
   font-size: 16px !important;
-  border-left: 1px solid $grey;
   padding-left: 10px;
+  position: absolute;
+  right: 1em;
 }
 
 .woocommerce-billing-fields {

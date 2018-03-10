@@ -27,17 +27,17 @@
 
     <div class="nav-mobile-toggle"></div>
 
-    <section class="special-event">
+    <!-- <section class="special-event">
         <div class="row">
             <div>There's something exciting happening! <a href="#">find out more</a>.</div>
         </div>
-    </section>
+    </section> -->
 
     <header class="header-wrap">
         <?php
         $logo = get_field('logo', 8);
         $logo = $logo['sizes']['large']; ?>
-        <?php if ($logo): ?>
+        <?php if ($logo && !is_front_page() ) : ?>
             <section class="site-logo">
                 <a href="<?php echo home_url(); ?>">
                     <img class="logo" src="<?php echo $logo; ?>" alt="CSArt Maine Logo">

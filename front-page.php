@@ -82,10 +82,21 @@ $logo = $logo['sizes']['large'];
                 <?php endforeach; wp_reset_query(); ?>
             </div>
         </div>
+        <style>.tee h2 {
+            margin: 0;
+        }</style>
+        <div class="grid tee">
+            <div class="item">
+                <h2>C</h2>
+            </div>
+            <div class="item">
+                <h2>S</h2>
+            </div>
+            <div class="item">
+                <h2>Art</h2>
+            </div>
+        </div>
     </section>
-
-    <?php get_template_part('template-parts/meet-the-artist'); ?>
-    <?php get_template_part('template-parts/recent-products'); ?>
 
 </main>
 
