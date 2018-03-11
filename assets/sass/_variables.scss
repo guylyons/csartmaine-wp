@@ -2,19 +2,20 @@
     Variables
 =====================================*/
 
+
 /* Color Palette */
-$primary-color: #FFD673;
-$secondary-color: #78DCB6;
+
+// $primary-color: #FFD673;
+// $secondary-color: #78DCB6;
 $black: #000;
 $grey: #818181;
 $light-grey: #F7F7F7;
 $white: #FFF;
 $offyellow: #FFEDB2;
 $beige: #F9EAD5;
-
-// $hero-height: calc(100vh - 100px);
+$primary-color: $beige;
+$secondary-color: #403C37; // $hero-height: calc(100vh - 100px);
 $hero-height: 450px;
-
 // p {
 //   color: #010101;
 // }
