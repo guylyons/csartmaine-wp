@@ -305,25 +305,19 @@ Variations
 }
 
 .nav-categories {
-  text-align: center;
-  background-color: #000;
+  max-width: 1200px;
+  margin: 0 auto;
   ul {
     display: flex;
     justify-content: space-around;
     li {
       display: flex;
       flex-grow: 1;
-      &:hover {
-        background-color: $secondary-color;
-        cursor: pointer;
-      }
       a {
-        display: flex;
-        flex-grow: 1;
-        justify-content: center;
-        padding: 1em 0;
-        color: #fff;
-        font-size: 1.2em;
+        color: $black;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
