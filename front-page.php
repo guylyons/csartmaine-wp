@@ -19,7 +19,7 @@ $logo = $logo['sizes']['large'];
     <section>
         <div class="grid">
             <div class="item">
-                <h2>Market</h2>
+                <h2>Collect</h2>
                 <?php
                 $args = array(
                     'numberposts' => 1,
