@@ -19,7 +19,7 @@ $logo = $logo['sizes']['large'];
     <section>
         <div class="grid">
             <div class="item">
-                <h2>Shop</h2>
+                <h2>Market</h2>
                 <?php
                 $args = array(
                     'numberposts' => 1,
@@ -51,10 +51,10 @@ $logo = $logo['sizes']['large'];
         </div>
         <div class="grid">
             <div class="item">
-                <h2>Grid Item</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sunt quam quasi nisi repudiandae, necessitatibus reprehenderit facere dicta dolore magni volu.</p>
+                <?php the_field('custom_grid_block_1'); ?>
             </div>
             <div class="item">
+                <h2>Newsletter</h2>
                <?php get_template_part('template-parts/newsletter-signup'); ?>
             </div>
             <div class="item">
@@ -80,20 +80,6 @@ $logo = $logo['sizes']['large'];
                         <img src="<?php echo get_the_post_thumbnail_url($post["ID"], "thumbnail"); ?>">
                     </a>
                 <?php endforeach; wp_reset_query(); ?>
-            </div>
-        </div>
-        <style>.tee h2 {
-            margin: 0;
-        }</style>
-        <div class="grid tee">
-            <div class="item">
-                <h2>C</h2>
-            </div>
-            <div class="item">
-                <h2>S</h2>
-            </div>
-            <div class="item">
-                <h2>Art</h2>
             </div>
         </div>
     </section>
