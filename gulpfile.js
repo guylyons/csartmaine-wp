@@ -38,4 +38,5 @@ gulp.task("browser-sync", function() {
   });
 });
 
+gulp.task("build", ["sass"]);
 gulp.task("default", ["serve"]);

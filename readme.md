@@ -1,4 +1,7 @@
 # CSArt Maine WP
+
+[![Build Status](https://travis-ci.org/guylyons/csartmaine-wp.svg?branch=master)](https://travis-ci.org/guylyons/csartmaine-wp)
+
 WordPress Theme for csartmaine.org
 
 https://www.csartmaine.org

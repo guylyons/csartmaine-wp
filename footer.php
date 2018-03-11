@@ -46,7 +46,7 @@
     <section class="footer__callout">
         <section>
             <div class="pay-methods">
-                <p style="color: #fff;">© 2018 CSArt Maine, LLC.</p>
+                <p>© 2018 CSArt Maine, LLC.</p>
                 <?php echo do_shortcode( '[wc_payment_methods]' ); ?>
             </div>
         </section>

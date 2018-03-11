@@ -212,8 +212,9 @@ WooCommerce Menu Cart Plugin
 
 .wpmenucartli {
   font-size: 16px !important;
-  border-left: 1px solid $grey;
   padding-left: 10px;
+  position: absolute;
+  right: 1em;
 }
 
 .woocommerce-billing-fields {
@@ -307,15 +308,13 @@ Variations
   text-align: center;
   background-color: #000;
   ul {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-around;
     li {
       display: flex;
       flex-grow: 1;
       &:hover {
-        background-color: $primary-color;
+        background-color: $secondary-color;
         cursor: pointer;
       }
       a {

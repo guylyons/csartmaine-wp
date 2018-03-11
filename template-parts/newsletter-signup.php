@@ -1,6 +1,6 @@
 <section class="newsletter-signup">
     <div class="container row">
-        <?php the_field( 'newsletter_signup', 8 ); ?>
+        <?php the_field('newsletter_signup', 8); ?>
         <form action="//csartmaine.us11.list-manage.com/subscribe/post?u=654a644cb0e243b967829f801&amp;id=4ca57f6a57" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate newsletter-form-wrap" target="_blank" novalidate>
             <input class="email" placeholder="email address" type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
 

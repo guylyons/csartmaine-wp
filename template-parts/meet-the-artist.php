@@ -25,9 +25,9 @@
                 <hr>
                 <h4 class="center artist-name"><?php echo $name ?></h4>
                 <?php echo $bio ?>
-                <div class="center">
+                <!-- <div class="center">
                     <a href="/artists" class="button">Learn More</a>
-                </div>
+                </div> -->
             </section>
             <section class="image-doubler--outer" style="background-image: url('<?php echo $avatar_url; ?>');">
                 <section class="image-doubler--inner">

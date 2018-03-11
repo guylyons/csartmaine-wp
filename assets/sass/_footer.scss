@@ -2,13 +2,14 @@
 Footer
 =====================================*/
 .footer-wrap {
-  height: 200px;
+  // height: 200px;
   background: $white;
+  padding-bottom: 2em;
   .footer-nav {
     @media (max-width: 540px) {
       display: none;
     }
-    padding: 3em 0;
+    padding-top: 3em;
     @media (min-width: 768px) {
       section:first-of-type {
         lost-column: 4/12;
@@ -42,19 +43,23 @@ Footer
   }
   .footer__callout {
     lost-utility: clearfix;
-    background: $black;
-    text-align: center;
-    padding: 2em 0;
+    lost-center: 1200px;
+    // background: $black;
+    // text-align: center;
+    // padding: 2em 0;
     .title {
-      color: $white;
+      // color: $white;
       margin: 0;
     }
     position: relative;
     .pay-methods {
       p {
-        margin-top: 10px;
-        // margin-bottom: -12px;
+        margin-bottom: 0;
+        padding: .5em;
       }
+    }
+    .payment-methods {
+        margin-bottom: 0;
       // position: absolute;
       // right: 1em;
       // top: 1.5em;
