@@ -9,6 +9,9 @@
 @import 'vendor/typographic';
 @include typographic();
 
+/* Artists */
+@import 'artists/index';
+
 @import 'variables';
 @import 'fonts';
 
