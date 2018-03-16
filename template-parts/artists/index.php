@@ -21,11 +21,6 @@ $artist_query = new WP_Query($args);
             <div class="artist-index row">
                 <?php if (have_posts()) : $i=0; ?>
                     <?php while (have_posts()) : the_post(); $i++; ?>
-                        <?php if ($i == 5) : ?>
-                            </div>
-                            <?php get_template_part("template-parts/artists/instagram"); ?>
-                            <div class="artist-index row">
-                        <?php endif; ?>
                         <?php get_template_part('template-parts/artists/content'); ?>
                     <?php endwhile; ?>
                 <?php endif; ?>

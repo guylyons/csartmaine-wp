@@ -422,19 +422,3 @@ Header
         }
     }
 }
-
-.artists-dropdown--toggle {
-    display: flex;
-}
-
-.active::after {
-    content: "lol";
-    display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #000;
-    position: absolute;
-    left: auto;
-    right: auto;
-    bottom: 0;
-}

@@ -82,6 +82,17 @@ $logo = $logo['sizes']['large'];
                 <?php endforeach; wp_reset_query(); ?>
             </div>
         </div>
+        <div class="grid">
+            <div class="item">
+                <h2>hello world</h2>
+            </div>
+            <div class="item">
+                <?php get_template_part("template-parts/instagram"); ?>
+            </div>
+            <div class="item">
+                <h2>hello world</h2>
+            </div>
+        </div>
     </section>
 
 </main>

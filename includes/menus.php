@@ -2,17 +2,19 @@
 /*=====================================
     Register Menus
 =====================================*/
-function csart_register_menus() {
+function csart_register_menus()
+{
     register_nav_menus(array(
-        'primary'   =>    __( 'Primary Navigation', 'csartmaine' ),
-        'mobile'    =>    __( 'Mobile Navigation', 'csartmaine' ),
-        'footer'    =>    __( 'Footer Navigation', 'csartmaine' ),
+        'primary'   =>    __('Primary Navigation', 'csartmaine'),
+        'mobile'    =>    __('Mobile Navigation', 'csartmaine'),
+        'footer'    =>    __('Footer Navigation', 'csartmaine'),
     ));
 }
 
-add_action( 'init', 'csart_register_menus' );
+add_action('init', 'csart_register_menus');
 
-function csart_primary_nav() {
+function csart_primary_nav()
+{
     wp_nav_menu(array(
         'container'       => false,                        // remove nav container
         'menu'            => 'Primary Nav',                // nav name
@@ -27,7 +29,8 @@ function csart_primary_nav() {
     ));
 }
 
-function csart_mobile_nav() {
+function csart_mobile_nav()
+{
     wp_nav_menu(array(
         'container'       => false,                        // remove nav container
         'menu'            => 'Mobile Nav',                 // nav name
@@ -42,7 +45,8 @@ function csart_mobile_nav() {
     ));
 }
 
-function csart_footer_nav() {
+function csart_footer_nav()
+{
     wp_nav_menu(array(
         'container'       => false,                        // remove nav container
         'menu'            => 'Footer Nav',                 // nav name
