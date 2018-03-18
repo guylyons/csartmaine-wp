@@ -39,7 +39,7 @@ get_header(); ?>
                         <?php if ($website): ?>
                             <tr>
                                 <td>
-                                    <a href="<?php echo $website; ?>">Website</a>
+                                    <a href="<?php echo $website; ?>"><?php echo $website; ?></a>
                                 </td>
                             </tr>
                         <?php endif; ?>

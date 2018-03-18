@@ -1,10 +1,10 @@
 /*=====================================
 WooCommerce
 =====================================*/
+
 // .shop {
 //   padding: 1em 0;
 // }
-
 // .page-description {
 //   lost-column: 6/12;
 // }
@@ -54,7 +54,6 @@ WooCommerce
 // .woocommerce-ordering {
 //   padding: 1em 0;
 //   text-align: right;
-
 //   .orderby {
 //     background: $light-grey;
 //   }
@@ -69,11 +68,9 @@ WooCommerce
 //   font-family: "Helvetica Neue", "Helvetica", sans-serif;
 //   border: 2px solid $secondary-color;
 // }
-
 // .variations .value select {
 //   height: 30px;
 // }
-
 // .woocommerce-breadcrumb {
 //   padding: 20px 0;
 //   a {
@@ -83,7 +80,6 @@ WooCommerce
 //     text-decoration: underline;
 //   }
 // }
-
 // /*=====================================
 // Product Index
 // =====================================*/
@@ -143,21 +139,17 @@ WooCommerce
 //   height: 40px;
 //   width: 40px;
 // }
-
 // .onsale--large {
 //   font-size: 12px;
 //   padding: 20px 10px;
 //   height: 50px;
 //   width: 50px;
 // }
-
 // .featured-product {
 // }
-
 // /*=====================================
 // Product Single
 // =====================================*/
-
 // .single-product {
 //   .woocommerce-artist-name {
 //     &:hover {
@@ -172,16 +164,13 @@ WooCommerce
 //       lost-column: 1/2;
 //       position: relative;
 //     }
-
 //     &::-webkit-scrollbar-track {
 //       background-color: #f5f5f5;
 //     }
-
 //     &::-webkit-scrollbar {
 //       width: 8px;
 //       background-color: $primary-color;
 //     }
-
 //     &::-webkit-scrollbar-thumb {
 //       background-color: $primary-color;
 //     }
@@ -200,21 +189,18 @@ WooCommerce
 //   .product {
 //   }
 // }
-
 // .contact-us {
 //   padding: 3em 0;
 //   // lost-center: 600px;
 // }
-
 // /*=====================================
 // WooCommerce Menu Cart Plugin
 // =====================================*/
-
 .wpmenucartli {
-  font-size: 16px !important;
-  padding-left: 10px;
-  position: absolute;
-  right: 1em;
+    font-size: 16px !important;
+    padding-left: 10px;
+    position: absolute;
+    right: 1em;
 }
 
 // .woocommerce-billing-fields {
@@ -229,20 +215,17 @@ WooCommerce
 //     }
 //   }
 // }
-
 // .woocommerce-shipping-fields {
 //   textarea {
 //     width: 100%;
 //     height: 300px;
 //   }
 // }
-
 // .order-bottom,
 // .cart-collaterals {
 //   border: 1px solid $grey;
 //   padding: 3em;
 // }
-
 // .checkout {
 //   #createaccount {
 //     width: initial;
@@ -257,7 +240,6 @@ WooCommerce
 //     margin-left: 10px;
 //   }
 // }
-
 // /*==========================================
 // Variations
 // ==========================================*/
@@ -283,7 +265,6 @@ WooCommerce
 //   padding: 15px;
 //   margin-bottom: 15px;
 // }
-
 // .shop-wrap {
 //   aside {
 //     padding-top: 60px;
@@ -298,12 +279,10 @@ WooCommerce
 //     float: left;
 //   }
 // }
-
 // .woocommerce-tabs,
 // .wc-tabs-wrapper {
 //   display: none;
 // }
-
 // .nav-categories {
 //   max-width: 1200px;
 //   margin: 0 auto;
@@ -322,7 +301,10 @@ WooCommerce
 //     }
 //   }
 // }
-
 .content-area {
-  lost-center: 1200px;
+    lost-center: 1200px;
+}
+
+.woocommerce .woocommerce-breadcrumb{
+  margin-top: 1em;
 }

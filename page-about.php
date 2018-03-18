@@ -13,7 +13,6 @@ get_header(); ?>
 
         <?php if (have_rows('team')) : ?>
             <section class="team">
-                <h1>Our Team</h1>
                 <div class="container row">
                     <?php while (have_rows('team')): the_row(); ?>
                         <?php $image = get_sub_field('profile_picture'); ?>

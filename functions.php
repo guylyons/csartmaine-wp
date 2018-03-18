@@ -1,5 +1,6 @@
 <?php
 /* Image cropping */
+set_post_thumbnail_size(300, 300, true);
 add_image_size('product_thumb', 500, 500, true);
 add_image_size('index_blog', 600, 180, true);
 add_image_size('hero', 1280, 400, true);
