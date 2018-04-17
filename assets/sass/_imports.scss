@@ -2,12 +2,6 @@
     Imports
 =====================================*/
 @import 'deps/normalize';
-@import 'vendor/wordpress-core';
-
-/* Vendor */
-@import 'vendor/slick';
-@import 'vendor/typographic';
-@include typographic();
 
 /* Artists */
 @import 'artists/index';

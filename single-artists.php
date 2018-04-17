@@ -6,7 +6,7 @@ $website = get_field('artist_website');
 $bio = get_field('artist_bio');
 $avatar = get_field('artist_avatar');
 if ($avatar) {
-    $avatar_thumbnail = $avatar['sizes']['thumbnail'];
+  $avatar_thumbnail = $avatar['sizes']['thumbnail'];
 }
 $facebook = get_field('facebook');
 $twitter = get_field('twitter');
@@ -49,12 +49,12 @@ get_header(); ?>
                                 <?php
                                 $terms = get_the_terms($post->ID, 'season');
                                 foreach ($terms as $term) {
-                                    echo '<div class="item">';
-                                    $slug = $term->slug;
-                                    echo "<a href='/season/$slug'>";
-                                    echo $term->name;
-                                    echo '</a>' . ' '; // space at the end here
-                                    echo '</div>';
+                                  echo '<div class="item">';
+                                  $slug = $term->slug;
+                                  echo "<a href='/season/$slug'>";
+                                  echo $term->name;
+                                  echo '</a>' . ' '; // space at the end here
+                                  echo '</div>';
                                 }
                                 ?>
                             </td>
@@ -91,13 +91,13 @@ get_header(); ?>
                 <div class="row">
                     <?php
                     $related_products = get_posts(array(
-                    'numberposts'	=> -1,
-                    'post_type'		=> 'product',
-                    'meta_key'		=> 'related_artist',
-                    'meta_value'	=> $post->ID
+                      'numberposts'	=> -1,
+                      'post_type'	=> 'product',
+                      'meta_key'	=> 'related_artist',
+                      'meta_value'	=> $post->ID
                     ));
                     if (!$related_products == 0) {
-                        var_dump($related_products);
+                      var_dump($related_products);
                     }
                     ?>
                 </div>

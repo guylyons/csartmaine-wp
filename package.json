@@ -9,7 +9,6 @@
   "author": "Guy Lyons",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2",
     "browser-sync": "^2.23.6",
     "bulma": "^0.6.2",
     "gulp": "^3.9.1",
