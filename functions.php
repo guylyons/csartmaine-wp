@@ -13,6 +13,8 @@ require 'includes/menus.php';
 require 'includes/helpers.php';
 /* Custom Post Types & Taxonomies */
 require 'includes/cpt.php';
+/* Custom Shortcodes */
+require 'includes/custom-shortcodes.php';
 
 add_theme_support('title-tag');
 
@@ -29,3 +31,11 @@ add_action('admin_init', 'wpb_imagelink_setup', 10);
 /* WooCommerce features */
 add_theme_support('woocommerce');
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+
+add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+function woo_remove_product_tabs($tabs)
+{
+    unset($tabs['reviews']);
+    unset($tabs['additional_information']);
+    return $tabs;
+}

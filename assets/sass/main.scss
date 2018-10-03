@@ -3,14 +3,9 @@
     lost-column: 1/4;
 }
 
-
 /*=====================================
 Global 👻
 =====================================*/
-
-* {
-    box-sizing: border-box;
-}
 
 a {
     color: #0366d6;
@@ -27,6 +22,9 @@ body {
     background: #ffffff;
 }
 
+.turbolinks-progress-bar {
+    visibility: hidden;
+}
 
 /*=====================================
 Newsletter
@@ -58,22 +56,19 @@ Newsletter
         justify-content: center;
     }
     .gradient_circle {
-        /* gradient_circle: */
-        // background-image: linear-gradient(-90deg, #E149F2 12%, #FF1818 87%);
-        // @include cool_gradient;
-        background: $white;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.38);
-        border-radius: 50%;
-        width: 70px;
-        height: 70px;
+        background: #fff;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .38);
+        /* border-radius: 50%; */
+        width: 100px;
+        /* height: 70px; */
         border: 0;
-        text-align: center;
-        font-size: 16px;
-        color: $black;
-        line-height: 18px;
-        padding: 20px 0;
+        /* text-align: center; */
+        font-size: 14px;
+        color: #000;
+        /* line-height: 18px; */
+        padding: 10px 0;
         text-transform: uppercase;
-        margin: 0;
+        /* margin: 0; */
         &:hover {
             box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.45);
             background: $black;
@@ -118,287 +113,6 @@ Newsletter
 //     padding-left: 1em;
 //     padding-right: 1em;
 // }
-
-/*=====================================
-Section 1: Front Page Slider
-=====================================*/
-
-// .home .nav-primary {
-//     position: absolute;
-//     left: 0; right: 0;
-//     z-index: 9999;
-// }
-.slider {
-    margin-top: 2em;
-    margin-bottom: 2em;
-    @extend .container;
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.1);
-    display: flex;
-    margin-bottom: 2em;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #eee;
-    .slider-content {
-        padding: 2em; // height: 100%;
-        @media (max-width: 768px) {
-            &:before {
-                content: "Swipe to navigate";
-                text-align: center;
-            }
-        }
-    }
-    .slider-item {
-        // background-color: $secondary-color;
-        @media (min-width: 540px) {
-            position: relative;
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            height: $hero-height;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-    .slick-arrow {
-        position: absolute;
-        top: 40%;
-        z-index: 5;
-        opacity: 0.2;
-        transition: opacity 0.5s;
-        color: $black;
-        background: rgba(255, 255, 255, 0.1);
-        padding: 20px 15px;
-        &:hover {
-            background: rgba(255, 255, 255, 0.6);
-            cursor: pointer;
-        }
-    }
-    .slick-prev {
-        left: 0;
-    }
-    .slick-next {
-        right: 0;
-    }
-    .slick-dots {
-        left: 0;
-        text-align: center;
-        margin: 0;
-        opacity: 0.2;
-        transition: opacity 0.5s;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-    &:hover>.slick-arrow,
-    &:hover .slick-dots {
-        opacity: 1;
-    }
-    @media (max-width: 768px) {
-        .slick-arrow,
-        .slick-dots {
-            display: none !important;
-        }
-    }
-}
-
-// CSArt settings
-.slick-dots {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    display: inline-block;
-    text-align: left;
-    li {
-        display: inline-block;
-        margin-right: 5px;
-        &:before {
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            border: 1px solid $black;
-            border-radius: 50%;
-        }
-    }
-    .slick-active:before {
-        content: "";
-        background: $black;
-    }
-    button {
-        display: none;
-    }
-}
-
-.shop-feature {
-    img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-.introduction {
-    background-color: #f6f6f6;
-    text-align: center;
-    padding: 4em 0;
-    .introduction__content {
-        lost-center: 500px;
-        padding: 1em;
-    }
-}
-
-
-/*=====================================
-Section 2
-=====================================*/
-
-.section-2 {
-    padding-left: 1em;
-}
-
-.about,
-.about-image {
-    height: 450px;
-}
-
-.recent-posts {
-    lost-column: 6/12;
-    @media (max-width: 425px) {
-        lost-column: 1;
-        li {
-            lost-column: 1/2;
-        }
-    }
-    list-style: none;
-    li {
-        padding: 5px;
-        &:hover {
-            background: $light-grey;
-        }
-    }
-}
-
-.triangle-image {
-    lost-column: 6/12;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 400px;
-    @media (max-width: 768px) {
-        display: none;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 40px;
-        border-top: 24px solid transparent;
-        border-bottom: 24px solid transparent;
-        border-left: 24px solid #fff;
-    }
-}
-
-.recent-tweets {
-    margin-top: 3em;
-    lost-column: 4/12 2;
-    @media (max-width: 768px) {
-        display: none;
-    }
-    a {
-        color: $primary-color;
-    }
-    .title {
-        text-align: center;
-    }
-    ul {
-        @include plain-list;
-    }
-    li {
-        padding: 1em;
-        margin-bottom: 25px;
-        background: $light-grey;
-        font-size: 0.9em;
-    }
-}
-
-
-/*=====================================
-Section 3
-=====================================*/
-
-.meet-the-artist {
-    padding-top: 3em;
-    img {
-        width: 100%;
-        height: auto;
-    }
-    .left-block {
-        lost-offset: -1/12;
-        lost-column: 6/12;
-    }
-    .right-block {
-        lost-column: 4/12;
-    }
-}
-
-.image-doubler--outer {
-    position: relative;
-    background-size: 70%;
-    background-position: 200% -70%;
-    height: 100%;
-    width: 100%;
-    @media (min-width: 769px) {
-        lost-column: 1/2;
-    }
-    .image-doubler--inner {
-        text-align: center;
-        padding: 4em 0;
-        img {
-            border: 10px solid $white;
-            width: 70%;
-        }
-    }
-}
-
-.image-doubler--content {
-    @media (min-width: 769px) {
-        lost-column: 2/4;
-    }
-    padding-bottom: 2em;
-    .artist-name {
-        padding: 5px 0;
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
-}
-
-
-/*=====================================
-Section 4
-=====================================*/
-
-.section-4 {
-    background: $light-grey;
-    padding: 3em 0;
-}
-
-.new-products {
-    position: relative;
-    .new-products-image {
-        width: 100%;
-        height: auto;
-        border-bottom: 2px solid transparent;
-        &:hover {
-            border-bottom: 2px solid $primary-color;
-        }
-    }
-    .new-products-content {
-        position: relative;
-    }
-}
-
-
 /*=====================================
 Blog Index
 =====================================*/
@@ -410,16 +124,12 @@ Blog Index
     display: none;
 }
 
-.blog-article {
-    // lost-center: 700px;
-    max-width: 700px;
-    p {
-        font-size: 1.2em;
-        line-height: 1.75;
+.index-item {
+    img {
+        width: 100%;
+        height: auto;
     }
 }
-
-
 
 .page-default {
     lost-center: 1200px;
@@ -501,45 +211,44 @@ Blog Index
     color: $black !important;
 }
 
-
 /*=====================================
 Ninja Forms
 =====================================*/
 
-.ninja-forms-cont {
-    .ninja-forms-required-items,
-    .ninja-forms-req-symbol {
-        display: none;
-    }
-    input,
-    textarea {
-        border: 1px solid #979797;
-        border-radius: 6px;
-        color: #747474;
-        position: relative;
-        margin: 0;
-        padding: 8px;
-    }
-    input:focus,
-    textarea:focus {
-        outline: none;
-        background: #f6f6f6;
-    }
-    textarea {
-        margin-bottom: 10px !important;
-    }
-    input[type="submit"] {
-        @extend .button;
-    }
-    p {
-        margin-top: 1em;
-        margin-bottom: 5px;
-        font-size: 14px;
-    }
-    div {
-        margin: 0;
-    }
-}
+// .ninja-forms-cont {
+//     .ninja-forms-required-items,
+//     .ninja-forms-req-symbol {
+//         display: none;
+//     }
+//     input,
+//     textarea {
+//         border: 1px solid #979797;
+//         border-radius: 6px;
+//         color: #747474;
+//         position: relative;
+//         margin: 0;
+//         padding: 8px;
+//     }
+//     input:focus,
+//     textarea:focus {
+//         outline: none;
+//         background: #f6f6f6;
+//     }
+//     textarea {
+//         margin-bottom: 10px !important;
+//     }
+//     input[type="submit"] {
+//         @extend .button;
+//     }
+//     p {
+//         margin-top: 1em;
+//         margin-bottom: 5px;
+//         font-size: 14px;
+//     }
+//     div {
+//         margin: 0;
+//     }
+// }
 
 .taxonomy-content {
     header {
@@ -561,65 +270,9 @@ Ninja Forms
     }
 }
 
-
-/*=====================================
-Reminder
-=====================================*/
-
-.reminder {
-    display: none;
-    z-index: 9999;
-    background: #f9f3bb;
-    padding: 2em;
-    border-radius: 2px;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 400px;
-    height: 200px;
-    h3 {
-        font-weight: bold;
-    }
-    .newsletter-form-wrap {
-        display: flex;
-    }
-    .email {
-        border: 0;
-        background: none;
-        border-bottom: 2px solid;
-        padding-left: 0;
-        color: $black;
-        width: 100%;
-        &:focus {
-            box-shadow: 0;
-            outline: 0;
-        }
-    }
-    .submit {
-        border: 0;
-        background: none;
-        padding: 0;
-        position: relative;
-        top: 10px;
-        left: -25px;
-    }
-}
-
 .box-shadow {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
     margin: 1em;
     padding: 2em;
     background-color: $light-grey;
-}
-
-.pagination {
-    text-align: center;
-    margin-bottom: 2.5em;
-    a,
-    span {
-        padding: 10px;
-        &:hover {
-            background-color: $secondary-color;
-        }
-    }
 }

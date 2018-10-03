@@ -12,18 +12,19 @@
 
 <!DOCTYPE html>
 <html id="top">
-<?php get_template_part('template-parts/comodo') ?>
+<?php get_template_part('template-parts/comodo')?>
 <head>
-<meta charset="<?php bloginfo('charset'); ?>">
+<meta charset="<?php bloginfo('charset');?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<?php wp_head(); ?>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/turbolinks.js"></script>
+<?php wp_head();?>
 </head>
 
 <nav class="nav nav--mobile">
-    <?php csart_mobile_nav(); ?>
+    <?php csart_mobile_nav();?>
 </nav>
 
-<body <?php body_class() ?>>
+<body <?php body_class()?>>
 
     <div class="nav-mobile-toggle"></div>
 
@@ -36,22 +37,23 @@
     <header class="header-wrap">
         <?php
         $logo = get_field('logo', 8);
-        $logo = $logo['sizes']['large']; ?>
+        $logo = $logo['sizes']['large'];?>
 
         <?php if ($logo) : ?>
             <section class="site-logo">
                 <a href="<?php echo home_url(); ?>">
-                    <img class="logo" src="<?php echo $logo; ?>" alt="CSArt Maine Logo">
+                    <img class="logo" src="<?php echo $logo; ?>"
+                         alt="CSArt Maine Logo">
                 </a>
             </section>
-        <?php endif; ?>
+        <?php endif;?>
 
         <nav class="nav-primary">
-            <?php csart_primary_nav(); ?>
+            <?php csart_primary_nav();?>
         </nav><!-- .nav-primary -->
 
 
         <nav class="nav-mobile">
-            <?php csart_mobile_nav(); ?>
+            <?php csart_mobile_nav();?>
         </nav><!-- .nav-mobile -->
     </header>

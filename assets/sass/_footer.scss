@@ -2,9 +2,11 @@
 Footer
 =====================================*/
 .footer-wrap {
-  // height: 200px;
-  background: $white;
-  padding-bottom: 2em;
+      background: $primary-color;
+    /* padding-bottom: 2em; */
+    /* font-family: cursive; */
+    /* font-size: .8em; */
+    letter-spacing: 1px;
   .footer-nav {
     @media (max-width: 540px) {
       display: none;
@@ -29,7 +31,7 @@ Footer
       }
     }
     a {
-      color: $grey;
+      // color: $grey;
       &:hover {
         text-decoration: underline;
       }

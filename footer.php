@@ -2,11 +2,11 @@
     <div class="container">
         <nav class="footer-nav row">
             <section class="footer-statement">
-                <?php the_field( 'footer_statement', 8 ); ?>
+                <?php the_field('footer_statement', 8);?>
             </section>
             <section>
                 <h5>Navigate</h5>
-                <?php csart_footer_nav(); ?>
+                <?php csart_footer_nav();?>
             </section>
             <section>
                 <ul class="social-icons">
@@ -24,9 +24,9 @@
         </section>
     </section>
 </footer>
-<?php wp_footer(); ?>
+<?php wp_footer();?>
 
-<?php get_template_part( 'template-parts/google-analytics' ); ?>
+<?php get_template_part('template-parts/google-analytics');?>
 
 </body>
 </html>

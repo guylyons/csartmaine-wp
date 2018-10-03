@@ -12,25 +12,21 @@ get_header(); ?>
         <?php get_template_part('template-parts/hero'); ?>
 
         <?php if (have_rows('team')) : ?>
-            <section class="team">
-                <div class="container row">
-                    <?php while (have_rows('team')): the_row(); ?>
-                        <?php $image = get_sub_field('profile_picture'); ?>
-                        <div class="team__member">
-                            <img class="profile-picture" src="<?php echo $image['url']; ?>" alt="<?php echo get_sub_field('team_name'); ?>" />
-                            <div class="team__member-content">
-                                <h3><?php echo get_sub_field('team_name'); ?></h3>
-                                <?php echo get_sub_field('team_content'); ?>
-                            </div>
+            <section class="team row">
+                <?php while (have_rows('team')): the_row(); ?>
+                    <?php $image = get_sub_field('profile_picture'); ?>
+                    <div class="team__member third">
+                        <img class="profile-picture" src="<?php echo $image['url']; ?>" alt="<?php echo get_sub_field('team_name'); ?>" />
+                        <div class="team__member-content">
+                            <h3><?php echo get_sub_field('team_name'); ?></h3>
+                            <!-- <?php echo get_sub_field('team_content'); ?> -->
                         </div>
-                    <?php endwhile; ?>
-                </div>
+                    </div>
+                <?php endwhile; ?>
             </section>
         <?php endif; ?>
 
-        <div class="container row">
-            <?php the_content(); ?>
-        </div>
+        <!-- <?php the_content(); ?> -->
     </div>
 
     <?php endwhile; endif; ?>

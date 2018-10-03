@@ -1,18 +1,17 @@
 /*=====================================
     Imports
 =====================================*/
+
 @import 'deps/normalize';
 
 /* Artists */
+
 @import 'artists/index';
 @import 'artists/content';
-
 @import 'variables';
 @import 'fonts';
-
 @import 'mixins';
 @import 'util';
-
 @import 'header';
 @import 'footer';
 @import 'woocommerce';

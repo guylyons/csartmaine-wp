@@ -19,12 +19,11 @@ $the_query = new WP_Query($args);
 
         <main role="main" class="site-main" id="main">
 
-            <section class="container index-blog">
+            <section class="index-blog">
                 <section class="row">
                     <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                         <?php get_template_part('template-parts/blog/index'); ?>
                     <?php endwhile; ?>
-
                 </section>
             </section>
 

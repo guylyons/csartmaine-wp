@@ -12,15 +12,10 @@ gulp.task("sass", function() {
     .src("assets/sass/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(sass.sync().on("error", sass.logError))
-    .pipe(
-      autoprefixer({
-        browsers: ["last 3 versions"],
-        cascade: false
-      })
-    )
+    .pipe(autoprefixer({ browsers: ["last 2 versions"], cascade: false }))
     .pipe(postcss([lost()]))
-    .pipe(nano())
     .pipe(sourcemaps.write())
+    .pipe(nano())
     .pipe(gulp.dest("./assets/css"));
 });
 
